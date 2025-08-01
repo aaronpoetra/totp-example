@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algorithm Breakdown Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .info { background-color: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; }
+        button { padding: 10px 20px; margin: 10px 0; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #testResults { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Algorithm Breakdown Section Test</h1>
+    <p>This test verifies that the Algorithm Breakdown section in the TOTP demo works correctly.</p>
+    
+    <button onclick="runTest()">Run Test</button>
+    <button onclick="openMainDemo()">Open Main Demo</button>
+    
+    <div id="testResults"></div>
+    
+    <script>
+        function addResult(message, type = 'info') {
+            const resultsDiv = document.getElementById('testResults');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `test-result ${type}`;
+            resultDiv.innerHTML = message;
+            resultsDiv.appendChild(resultDiv);
+        }
+        
+        function clearResults() {
+            document.getElementById('testResults').innerHTML = '';
+        }
+        
+        async function runTest() {
+            clearResults();
+            addResult('🧪 Starting Algorithm Breakdown Test...', 'info');
+            
+            try {
+                // Test 1: Check if main demo page exists
+                addResult('📋 Test 1: Checking if main demo page exists...', 'info');
+                const response = await fetch('/totp-demo.html');
+                if (response.ok) {
+                    addResult('✅ Test 1 PASSED: Main demo page exists', 'success');
+                } else {
+                    addResult('❌ Test 1 FAILED: Main demo page not found', 'error');
+                    return;
+                }
+                
+                // Test 2: Create iframe to test the functionality
+                addResult('📋 Test 2: Loading main demo in iframe...', 'info');
+                const iframe = document.createElement('iframe');
+                iframe.src = '/totp-demo.html';
+                iframe.style.width = '1px';
+                iframe.style.height = '1px';
+                iframe.style.opacity = '0';
+                iframe.style.position = 'absolute';
+                iframe.style.left = '-9999px';
+                document.body.appendChild(iframe);
+                
+                // Wait for iframe to load
+                await new Promise((resolve) => {
+                    iframe.onload = resolve;
+                });
+                
+                addResult('✅ Test 2 PASSED: Demo loaded in iframe', 'success');
+                
+                // Test 3: Check if algorithmSteps div exists
+                addResult('📋 Test 3: Checking if algorithmSteps div exists...', 'info');
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const algorithmSteps = iframeDoc.getElementById('algorithmSteps');
+                
+                if (algorithmSteps) {
+                    addResult('✅ Test 3 PASSED: algorithmSteps div found', 'success');
+                } else {
+                    addResult('❌ Test 3 FAILED: algorithmSteps div not found', 'error');
+                    return;
+                }
+                
+                // Test 4: Check initial state
+                addResult('📋 Test 4: Checking initial state of algorithmSteps...', 'info');
+                const initialContent = algorithmSteps.innerHTML.trim();
+                addResult(`ℹ️ Initial content length: ${initialContent.length} characters`, 'info');
+                
+                // Test 5: Simulate enrollment (create mock data)
+                addResult('📋 Test 5: Setting up mock enrollment data...', 'info');
+                const mockSecret = {
+                    account: 'test@example.com',
+                    secret: new Uint8Array([72, 101, 108, 108, 111, 87, 111, 114, 108, 100]), // "HelloWorld" in bytes
+                    issuer: 'Test App'
+                };
+                
+                // Store in iframe's localStorage
+                iframe.contentWindow.localStorage.setItem('totpSecret', JSON.stringify(mockSecret));
+                addResult('✅ Test 5 PASSED: Mock enrollment data set', 'success');
+                
+                // Test 6: Switch to authenticator tab
+                addResult('📋 Test 6: Switching to authenticator tab...', 'info');
+                const authenticatorTab = iframeDoc.querySelector('[onclick="showPage(\'authenticator\')"');
+                if (authenticatorTab) {
+                    authenticatorTab.click();
+                    addResult('✅ Test 6 PASSED: Clicked authenticator tab', 'success');
+                } else {
+                    addResult('❌ Test 6 FAILED: Authenticator tab not found', 'error');
+                    return;
+                }
+                
+                // Test 7: Wait and check if content was added
+                addResult('📋 Test 7: Waiting for content to load...', 'info');
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                const finalContent = algorithmSteps.innerHTML.trim();
+                addResult(`ℹ️ Final content length: ${finalContent.length} characters`, 'info');
+                
+                if (finalContent.length > initialContent.length && finalContent.includes('Step 1')) {
+                    addResult('🎉 Test 7 PASSED: Algorithm Breakdown content loaded successfully!', 'success');
+                    addResult(`📝 Content preview: ${finalContent.substring(0, 200)}...`, 'info');
+                } else {
+                    addResult('❌ Test 7 FAILED: Algorithm Breakdown content not loaded', 'error');
+                }
+                
+                // Cleanup
+                document.body.removeChild(iframe);
+                addResult('🧹 Cleanup completed', 'info');
+                
+            } catch (error) {
+                addResult(`❌ Test failed with error: ${error.message}`, 'error');
+            }
+        }
+        
+        function openMainDemo() {
+            window.open('/totp-demo.html', '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -361,6 +361,660 @@
             50% { transform: scale(1.02); }
             100% { transform: scale(1); }
         }
+
+        /* Backup Codes Styles */
+
+        /* Technical Documentation Styles */
+        .backup-technical-docs {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .backup-technical-docs h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .failure-scenarios {
+            background: #fef3c7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .failure-scenarios ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .failure-scenarios li {
+            margin: 5px 0;
+            color: #92400e;
+        }
+
+        .implementation-steps {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .implementation-steps ol {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .implementation-steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border-left: 3px solid #10b981;
+            position: relative;
+        }
+
+        .implementation-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: -15px;
+            top: 15px;
+            background: #10b981;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .implementation-steps strong {
+            color: #059669;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .recovery-workflow {
+            background: #ede9fe;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .workflow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .workflow-arrow {
+            color: #8b5cf6;
+            font-size: 18px;
+            align-self: center;
+            margin: 5px 0;
+        }
+
+        .workflow-step-number {
+            background: #8b5cf6;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .workflow-step-text {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Security Analysis Styles */
+        .security-analysis {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .entropy-comparison, .attack-resistance {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .entropy-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .entropy-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .method {
+            min-width: 140px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .entropy-visual {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .entropy-bar-bg {
+            flex: 1;
+            height: 20px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .entropy-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        .entropy-value {
+            min-width: 80px;
+            font-family: monospace;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .resistance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .resistance-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .attack-type {
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .resistance-level {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .resistance-level.high {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .resistance-level.medium {
+            background: #fef3c7;
+            color: #d97706;
+        }
+
+        /* Comparison Table Styles */
+        .comparison-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 15px 0;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .feature-col, .totp-col, .backup-col {
+            padding: 12px 16px;
+            font-size: 14px;
+        }
+
+        .feature-col {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .totp-col {
+            background: #fef7ff;
+            color: #7c3aed;
+        }
+
+        .backup-col {
+            background: #f0fdf4;
+            color: #16a34a;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .security-analysis {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-header, .comparison-row {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-row > div {
+                border-top: 1px solid #e5e7eb;
+            }
+
+            .entropy-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .method {
+                min-width: auto;
+            }
+        }
+        /* Enhanced Backup Codes Display Styles */
+        .educational-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 0;
+        }
+
+        .educational-header h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .generation-info {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .codes-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .codes-grid.enhanced {
+            margin: 0;
+            border-radius: 0;
+            background: white;
+            border: none;
+            border-left: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            padding: 25px;
+            gap: 15px;
+        }
+
+        .backup-code-item.enhanced-visibility {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 18px 25px;
+            border-radius: 10px;
+            border: 2px solid #10b981;
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .backup-code-item.enhanced-visibility:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .code-number {
+            background: #10b981;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            min-width: 35px;
+            text-align: center;
+        }
+
+        .backup-code-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.4em;
+            font-weight: 700;
+            background: #1f2937;
+            color: #10b981;
+            padding: 12px 20px;
+            border-radius: 8px;
+            letter-spacing: 2px;
+            border: 1px solid #374151;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .code-status {
+            font-size: 0.85em;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .code-status.unused {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .code-status.used {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .educational-details {
+            background: #f9fafb;
+            border-radius: 0 0 12px 12px;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+            padding: 25px;
+        }
+
+        .security-warning.enhanced {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            color: #dc2626;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .usage-instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .usage-instructions h5 {
+            margin: 0 0 15px 0;
+            color: #374151;
+            font-size: 1.1em;
+        }
+
+        .usage-instructions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .usage-instructions li {
+            margin-bottom: 8px;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        /* Algorithm Enhancement Styles */
+        .algorithm-overview {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .algorithm-overview h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .algorithm-intro {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 1.05em;
+        }
+
+        .algorithm-step.enhanced {
+            background: white;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+        }
+
+        .core-functionality {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .core-functionality h5 {
+            margin: 0 0 15px 0;
+            color: #1f2937;
+            font-size: 1.1em;
+        }
+
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .step-number {
+            background: #3b82f6;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+            min-width: 40px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: #1f2937;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .technical-detail {
+            color: #6b7280;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .entropy-breakdown {
+            display: grid;
+            gap: 8px;
+        }
+
+        .entropy-item {
+            background: #f9fafb;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-left: 3px solid #10b981;
+            font-family: monospace;
+            font-size: 0.95em;
+        }
+
+        .backup-code-item {
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #cbd5e0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+        }
+
+        .backup-code-item code {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2d3748;
+            background: none;
+            padding: 0;
+        }
+
+        .security-warning {
+            background: #fef5e7;
+            border: 1px solid #f6ad55;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #744210;
+        }
+
+        .status-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .status-item {
+            padding: 10px;
+            background: #f7fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .backup-verification-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .backup-verification-section h3 {
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .backup-verification-section input {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .backup-verification-section input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .button-group button {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .codes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .status-info {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -374,6 +1028,7 @@
             <button class="nav-tab active" onclick="showPage('enrollment')">1. Enrollment</button>
             <button class="nav-tab" onclick="showPage('authenticator')">2. Authenticator</button>
             <button class="nav-tab" onclick="showPage('verification')">3. Verification</button>
+            <button class="nav-tab" onclick="showPage('backupcodes')">4. Backup Codes</button>
         </div>
 
         <!-- Enrollment Page -->
@@ -475,6 +1130,312 @@
                 </div>
             </div>
         </div>
+
+        <!-- Backup Codes Page -->
+        <div id="backupcodes" class="page">
+            <h2>🔑 Backup Codes (Recovery Codes)</h2>
+            <p>Backup codes provide an alternative authentication method when your primary TOTP device is unavailable.</p>
+
+            <!-- Backup Codes as Fallback Authentication -->
+            <div class="section">
+                <h3>🛡️ Backup Codes as Fallback Authentication</h3>
+                <div class="fallback-explanation">
+                    <div class="fallback-overview">
+                        <h4>📱 When Your Authenticator App Fails</h4>
+                        <p>Backup codes serve as a critical fallback mechanism when your primary TOTP authenticator becomes unavailable due to:</p>
+                        <ul class="failure-scenarios">
+                            <li><strong>Device Loss/Theft:</strong> Phone stolen, lost, or damaged</li>
+                            <li><strong>Hardware Failure:</strong> Device malfunction or battery death</li>
+                            <li><strong>Software Issues:</strong> App corruption, OS updates, or factory resets</li>
+                            <li><strong>Network Problems:</strong> No internet connectivity for cloud-synced authenticators</li>
+                            <li><strong>Account Recovery:</strong> Switching devices or restoring from backup</li>
+                        </ul>
+                    </div>
+
+                    <div class="algorithm-step">
+                        <h4>🔧 Step 1: Pre-Generation Security Setup</h4>
+                        <p><strong>Purpose:</strong> Initialize secure environment and define parameters for backup code generation.</p>
+
+                        <details class="collapsible-section">
+                            <summary>🛠️ Server-Side Preparation</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>CSPRNG:</strong> Initialize cryptographically secure random number generator</div>
+                                <div class="code-display">• <strong>Character Set:</strong> 32 chars excluding visually similar pairs (0/O, 1/I/l)</div>
+                                <div class="code-display">• <strong>Format:</strong> 12 characters in XXXX-XXXX-XX pattern</div>
+                                <div class="code-display">• <strong>Storage:</strong> Prepare secure storage with salt and hash functions</div>
+                            </div>
+                        </details>
+
+                        <details class="collapsible-section">
+                            <summary>📝 Character Set Definition</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Included:</strong> ABCDEFGHJKMNPQRSTUVWXYZ23456789</div>
+                                <div class="code-display">• <strong>Excluded:</strong> 0 (zero), O (oh), 1 (one), I (eye), L (ell)</div>
+                                <div class="code-display">• <strong>Base:</strong> 32 characters (power of 2 for efficient encoding)</div>
+                                <div class="code-display">• <strong>Rationale:</strong> Prevent visual confusion during manual entry</div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="algorithm-step">
+                        <h4>🎲 Step 2: Cryptographic Code Generation</h4>
+                        <p><strong>Purpose:</strong> Generate cryptographically secure backup codes with sufficient entropy.</p>
+
+                        <details class="collapsible-section">
+                            <summary>🔐 Generation Algorithm</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Entropy Source:</strong> Web Crypto API's getRandomValues()</div>
+                                <div class="code-display">• <strong>Code Count:</strong> Generate 10 codes for redundancy</div>
+                                <div class="code-display">• <strong>Mapping:</strong> Apply modulo operation to map random bytes to character set</div>
+                                <div class="code-display">• <strong>Formatting:</strong> Add hyphens for readability and error detection</div>
+                            </div>
+                        </details>
+
+                        <details class="collapsible-section">
+                            <summary>📊 Entropy Calculation</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Per Code:</strong> log₂(32¹²) = 12 × log₂(32) = 12 × 5 = 60 bits</div>
+                                <div class="code-display">• <strong>Total Set:</strong> 10 codes × 60 bits = 600 bits total entropy</div>
+                                <div class="code-display">• <strong>Security Level:</strong> Exceeds 256-bit security threshold</div>
+                                <div class="code-display">• <strong>Comparison:</strong> Stronger than typical 128-bit AES keys</div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="algorithm-step">
+                        <h4>💾 Step 3: Secure Storage & Hashing</h4>
+                        <p><strong>Purpose:</strong> Store backup codes securely with proper hashing and metadata.</p>
+
+                        <details class="collapsible-section">
+                            <summary>🔒 Hashing Strategy</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Algorithm:</strong> bcrypt or scrypt with unique salt per code</div>
+                                <div class="code-display">• <strong>Work Factor:</strong> Minimum 12 rounds for bcrypt</div>
+                                <div class="code-display">• <strong>Salt:</strong> Cryptographically random, unique per code</div>
+                                <div class="code-display">• <strong>Storage:</strong> Never store plaintext codes on server</div>
+                            </div>
+                        </details>
+
+                        <details class="collapsible-section">
+                            <summary>📋 Metadata Management</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Creation Time:</strong> ISO timestamp for audit trail</div>
+                                <div class="code-display">• <strong>Usage Status:</strong> Boolean flag for one-time use enforcement</div>
+                                <div class="code-display">• <strong>Expiration:</strong> 90-day validity period from generation</div>
+                                <div class="code-display">• <strong>Rate Limiting:</strong> Max 3 verification attempts per minute</div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="algorithm-step">
+                        <h4>🔍 Step 4: Authentication Flow Implementation</h4>
+                        <p><strong>Purpose:</strong> Implement secure verification process for backup code authentication.</p>
+
+                        <details class="collapsible-section">
+                            <summary>✅ Verification Process</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Input Normalization:</strong> Remove spaces, hyphens, convert to uppercase</div>
+                                <div class="code-display">• <strong>Rate Check:</strong> Verify user hasn't exceeded attempt limits</div>
+                                <div class="code-display">• <strong>Hash Comparison:</strong> Constant-time comparison against stored hashes</div>
+                                <div class="code-display">• <strong>Immediate Invalidation:</strong> Mark code as used upon successful verification</div>
+                            </div>
+                        </details>
+
+                        <details class="collapsible-section">
+                            <summary>⚡ Constant-Time Comparison</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Purpose:</strong> Prevent timing attacks on hash comparison</div>
+                                <div class="code-display">• <strong>Implementation:</strong> Compare all bytes regardless of early mismatch</div>
+                                <div class="code-display">• <strong>Function:</strong> crypto.timingSafeEqual() or equivalent</div>
+                                <div class="code-display">• <strong>Security:</strong> Eliminates timing-based information leakage</div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="algorithm-step">
+                        <h4>🛡️ Step 5: Security Controls & Monitoring</h4>
+                        <p><strong>Purpose:</strong> Implement comprehensive security measures to protect against attacks.</p>
+
+                        <details class="collapsible-section">
+                            <summary>🚫 Attack Prevention</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Replay Protection:</strong> Immediate code invalidation after use</div>
+                                <div class="code-display">• <strong>Brute Force:</strong> Exponential backoff after failed attempts</div>
+                                <div class="code-display">• <strong>Account Lockout:</strong> Temporary suspension after repeated failures</div>
+                                <div class="code-display">• <strong>IP Blocking:</strong> Rate limiting per IP address</div>
+                            </div>
+                        </details>
+
+                        <details class="collapsible-section">
+                            <summary>📝 Audit & Logging</summary>
+                            <div class="collapsible-content">
+                                <div class="code-display">• <strong>Generation Events:</strong> Log all backup code creation</div>
+                                <div class="code-display">• <strong>Usage Tracking:</strong> Record successful and failed attempts</div>
+                                <div class="code-display">• <strong>Metadata:</strong> Timestamp, IP address, user agent, result</div>
+                                <div class="code-display">• <strong>Retention:</strong> Maintain logs for security analysis and compliance</div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Generate Backup Codes</h3>
+                <p><strong>⚠️ Important:</strong> Generating new backup codes will invalidate all previously generated codes.</p>
+                <button class="btn" onclick="generateBackupCodes()">Generate Backup Codes</button>
+                <button class="btn btn-success" onclick="downloadBackupCodes()" id="downloadBtn" style="display: none;">Download Codes</button>
+                <button class="btn btn-danger" onclick="clearBackupCodes()">Clear All Codes</button>
+            </div>
+
+            <div class="section" id="backupCodesDisplay" style="display: none;">
+                <h3>Your Backup Codes</h3>
+                <div class="alert alert-error">
+                    <strong>🚨 Security Warning:</strong> Store these codes in a secure location. Each code can only be used once.
+                </div>
+                <div id="generatedCodes" class="code-display" style="background: #f8f9fa; border: 2px solid #28a745; padding: 20px; font-family: monospace; font-size: 1.1em;"></div>
+            </div>
+
+            <div class="section" id="algorithmExplanation" style="display: none;">
+                <h3>🔍 Algorithm Breakdown</h3>
+                <div id="backupAlgorithmSteps"></div>
+            </div>
+
+            <div class="section">
+                <h3>Verify Backup Code</h3>
+                <div class="input-group">
+                    <label>Enter Backup Code:</label>
+                    <input type="text" id="backupCodeInput" placeholder="ABCD-EFGH-IJKL" maxlength="14" style="text-transform: uppercase;">
+                </div>
+                <button class="btn" onclick="verifyBackupCode()">Verify Backup Code</button>
+                <div id="backupVerificationResult"></div>
+            </div>
+
+            <div class="section">
+                <h3>📊 Backup Codes Status</h3>
+                <div id="backupCodesStatus">
+                    <div class="code-display">No backup codes generated yet</div>
+                </div>
+            </div>
+
+            <!-- Security Analysis Visualization -->
+            <div class="section">
+                <h3>🔬 Security Analysis & Entropy Visualization</h3>
+                <div class="security-analysis">
+                    <div class="entropy-comparison">
+                        <h4>Entropy Comparison</h4>
+                        <div class="entropy-chart">
+                            <div class="entropy-item">
+                                <span class="method">Backup Code (12 chars)</span>
+                                <div class="entropy-visual">
+                                    <div class="entropy-bar-bg">
+                                        <div class="entropy-bar-fill" style="width: 85%;"></div>
+                                    </div>
+                                    <span class="entropy-value">~50.4 bits</span>
+                                </div>
+                            </div>
+                            <div class="entropy-item">
+                                <span class="method">TOTP Code (6 digits)</span>
+                                <div class="entropy-visual">
+                                    <div class="entropy-bar-bg">
+                                        <div class="entropy-bar-fill" style="width: 35%;"></div>
+                                    </div>
+                                    <span class="entropy-value">~19.9 bits</span>
+                                </div>
+                            </div>
+                            <div class="entropy-item">
+                                <span class="method">4-digit PIN</span>
+                                <div class="entropy-visual">
+                                    <div class="entropy-bar-bg">
+                                        <div class="entropy-bar-fill" style="width: 22%;"></div>
+                                    </div>
+                                    <span class="entropy-value">~13.3 bits</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attack-resistance">
+                        <h4>Attack Resistance Analysis</h4>
+                        <div class="resistance-grid">
+                            <div class="resistance-item">
+                                <div class="attack-type">Brute Force</div>
+                                <div class="resistance-level high">High (2^50 attempts)</div>
+                            </div>
+                            <div class="resistance-item">
+                                <div class="attack-type">Dictionary Attack</div>
+                                <div class="resistance-level high">High (Random generation)</div>
+                            </div>
+                            <div class="resistance-item">
+                                <div class="attack-type">Replay Attack</div>
+                                <div class="resistance-level high">High (One-time use)</div>
+                            </div>
+                            <div class="resistance-item">
+                                <div class="attack-type">Time-based Attack</div>
+                                <div class="resistance-level medium">N/A (Not time-dependent)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOTP vs Backup Codes Comparison -->
+            <div class="section">
+                <h3>⚖️ TOTP vs Backup Codes Comparison</h3>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="feature-col">Feature</div>
+                        <div class="totp-col">TOTP Codes</div>
+                        <div class="backup-col">Backup Codes</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-col">Generation</div>
+                        <div class="totp-col">Time-based algorithm</div>
+                        <div class="backup-col">Cryptographically random</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-col">Validity</div>
+                        <div class="totp-col">30-second windows</div>
+                        <div class="backup-col">Until used or regenerated</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-col">Usage</div>
+                        <div class="totp-col">Unlimited (time-based)</div>
+                        <div class="backup-col">One-time use only</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-col">Device Dependency</div>
+                        <div class="totp-col">Requires authenticator app</div>
+                        <div class="backup-col">No device required</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-col">Security Level</div>
+                        <div class="totp-col">High (time-limited)</div>
+                        <div class="backup-col">Very High (single-use)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🛡️ Security Best Practices</h3>
+                <div class="algorithm-step">
+                    <h4>Storage Recommendations</h4>
+                    <p>• Print codes and store in a secure physical location</p>
+                    <p>• Use a password manager with secure backup</p>
+                    <p>• Never store codes in plain text files or emails</p>
+                </div>
+                <div class="algorithm-step">
+                    <h4>Usage Guidelines</h4>
+                    <p>• Each code can only be used once</p>
+                    <p>• Generate new codes when you have few remaining</p>
+                </div>
+                <div class="algorithm-step">
+                    <h4>Recovery Scenarios</h4>
+                    <p>• Lost or broken authenticator device</p>
+                    <p>• Clock synchronization issues</p>
+                    <p>• Temporary access from untrusted device</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -495,16 +1456,16 @@
 
             /**
              * Base32 Encoding (RFC 4648) - Educational Implementation
-             * 
+             *
              * Base32 converts binary data into a text representation using 32 characters.
              * It uses 5 bits per character (2^5 = 32), making it efficient for encoding.
-             * 
+             *
              * Algorithm Overview:
              * 1. Read input bytes (8 bits each)
              * 2. Accumulate bits in a buffer
              * 3. Extract 5-bit chunks and map to Base32 alphabet
              * 4. Handle remaining bits with padding
-             * 
+             *
              * Visual Example:
              * Input bytes:  [0x48, 0x65, 0x6C, 0x6C, 0x6F] = "Hello"
              * Binary:      01001000 01100101 01101100 01101100 01101111
@@ -516,7 +1477,7 @@
                 // RFC 4648 Base32 alphabet (32 characters: A-Z, 2-7)
                 // Each character represents a 5-bit value (0-31)
                 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
-                
+
                 let result = '';     // Final encoded string
                 let bits = 0;        // Number of bits currently in the accumulator
                 let value = 0;       // Bit accumulator (holds bits from multiple bytes)
@@ -527,7 +1488,7 @@
                     // This combines the new byte with any leftover bits from previous iterations
                     value = (value << 8) | buffer[i];
                     bits += 8;  // We now have 8 more bits to work with
-                    
+
                     // Educational note: At this point, 'value' contains up to 16 bits
                     // (8 from previous iteration + 8 from current byte)
 
@@ -537,13 +1498,13 @@
                         // (value >>> (bits - 5)) shifts right to get the top bits
                         // & 31 masks to keep only the bottom 5 bits (31 = 0x1F = 11111 binary)
                         const index = (value >>> (bits - 5)) & 31;
-                        
+
                         // Map the 5-bit value (0-31) to Base32 character
                         result += alphabet[index];
-                        
+
                         // Remove the 5 bits we just processed
                         bits -= 5;
-                        
+
                         // Educational note: 'value' still contains the remaining bits
                         // The next iteration will either add more bits or process remaining ones
                     }
@@ -556,7 +1517,7 @@
                     // & 31 ensures we only keep 5 bits
                     const index = (value << (5 - bits)) & 31;
                     result += alphabet[index];
-                    
+
                     // Educational note: This handles the case where the input length
                     // is not a multiple of 5 bits. We pad with zeros on the right.
                 }
@@ -573,22 +1534,22 @@
                 // - Process: Group into 5-bit chunks, map to alphabet
                 // - Output: Base32 string with padding
                 // - Efficiency: 8 bytes input → ~13 characters output (160 bits → 160 bits)
-                
+
                 return result;
             }
 
             /**
              * Base32 Decoding (RFC 4648) - Educational Implementation
-             * 
+             *
              * Base32 decoding reverses the encoding process, converting Base32 text
              * back into the original binary data.
-             * 
+             *
              * Algorithm Overview:
              * 1. Remove padding and normalize input
              * 2. Convert each Base32 character to its 5-bit value
              * 3. Accumulate 5-bit values into a bit buffer
              * 4. Extract 8-bit bytes when enough bits are available
-             * 
+             *
              * Visual Example (reverse of encoding):
              * Input:        "JBSWY3DP"
              * Base32 values: J=9, B=1, S=18, W=22, Y=24, 3=27, D=3, P=15
@@ -599,7 +1560,7 @@
             base32Decode(encoded) {
                 // Same RFC 4648 Base32 alphabet used for encoding
                 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
-                
+
                 // Step 1: Normalize input - remove padding and convert to uppercase
                 // Padding characters ('=') are only used for length alignment and can be removed
                 encoded = encoded.replace(/=/g, '').toUpperCase();
@@ -612,12 +1573,12 @@
                 for (let i = 0; i < encoded.length; i++) {
                     // Step 2a: Convert Base32 character to its numeric value (0-31)
                     const index = alphabet.indexOf(encoded[i]);
-                    
+
                     // Validate character - must be in the Base32 alphabet
                     if (index === -1) {
                         throw new Error(`Invalid Base32 character: '${encoded[i]}' at position ${i}`);
                     }
-                    
+
                     // Educational note: 'index' now contains a 5-bit value (0-31)
                     // representing the decoded value of the Base32 character
 
@@ -625,7 +1586,7 @@
                     // Shift existing bits left by 5 positions and OR in the new 5-bit value
                     value = (value << 5) | index;
                     bits += 5;  // We now have 5 more bits to work with
-                    
+
                     // Educational note: At this point, 'value' contains up to 10 bits
                     // (5 from previous iteration + 5 from current character)
 
@@ -635,13 +1596,13 @@
                         // (value >>> (bits - 8)) shifts right to get the top 8 bits
                         // & 255 masks to keep only the bottom 8 bits (255 = 0xFF = 11111111 binary)
                         const byte = (value >>> (bits - 8)) & 255;
-                        
+
                         // Store the decoded byte
                         result.push(byte);
-                        
+
                         // Remove the 8 bits we just processed
                         bits -= 8;
-                        
+
                         // Educational note: 'value' still contains any remaining bits
                         // These will be combined with bits from the next character
                     }
@@ -650,13 +1611,13 @@
                 // Step 3: Handle any remaining bits
                 // In proper Base32 encoding, there should be no significant remaining bits
                 // Any remaining bits should be padding zeros and can be ignored
-                
+
                 // Educational note: If there are remaining bits, they represent incomplete bytes
                 // This is normal due to the 5-bit to 8-bit conversion ratio
-                
+
                 // Convert result array to Uint8Array for consistency with encoding input
                 return new Uint8Array(result);
-                
+
                 // Educational summary:
                 // - Input: Base32 string (5 bits per character)
                 // - Process: Convert characters to 5-bit values, group into 8-bit bytes
@@ -667,26 +1628,26 @@
 
             /**
              * Time Counter Calculation - Educational Implementation
-             * 
+             *
              * The time counter is the foundation of TOTP's time-based nature.
              * It converts the current time into discrete time windows.
-             * 
+             *
              * Algorithm Overview:
              * 1. Get current Unix timestamp (seconds since epoch)
              * 2. Divide by time step (typically 30 seconds)
              * 3. Floor the result to get the current time window
-             * 
+             *
              * Visual Example:
              * Current time: 2024-01-15 10:30:45 UTC
              * Unix timestamp: 1705315845 seconds
              * Time step: 30 seconds
              * Counter: floor(1705315845 / 30) = 56843861
-             * 
+             *
              * Time Window Concept:
              * - Window 56843860: 10:30:00 - 10:30:29
              * - Window 56843861: 10:30:30 - 10:30:59 ← Current
              * - Window 56843862: 10:31:00 - 10:31:29
-             * 
+             *
              * Synchronization:
              * Both client and server use the same calculation,
              * ensuring they generate the same counter value.
@@ -695,19 +1656,19 @@
                 // Step 1: Get current time in seconds since Unix epoch (1970-01-01)
                 // Date.now() returns milliseconds, so divide by 1000 for seconds
                 const now = timestamp || Math.floor(Date.now() / 1000);
-                
+
                 // Educational note: Using floor() ensures we get integer seconds.
                 // The timestamp parameter allows testing with specific times.
 
                 // Step 2: Calculate which time window we're currently in
                 // Divide current time by time step and floor to get discrete windows
                 return Math.floor(now / this.timeStep);
-                
+
                 // Educational note: this.timeStep is typically 30 seconds.
                 // This creates 30-second windows where the same TOTP code is valid.
                 // The floor operation ensures all times within a window produce
                 // the same counter value, enabling synchronization between devices.
-                
+
                 // Educational summary:
                 // - Input: Current timestamp (or provided timestamp)
                 // - Process: Divide by time step and floor
@@ -717,22 +1678,22 @@
 
             /**
              * Number to Bytes Conversion - Educational Implementation
-             * 
+             *
              * Converts a JavaScript number into an 8-byte big-endian array.
              * This is required for HMAC input, which expects binary data.
-             * 
+             *
              * Algorithm Overview:
              * 1. Create an 8-byte ArrayBuffer
              * 2. Use DataView for proper byte ordering
              * 3. Write the number as a 32-bit unsigned integer at offset 4
              * 4. Return as Uint8Array for consistent handling
-             * 
+             *
              * Visual Example:
              * Input number: 56843861
              * Hex representation: 0x0363B765
              * 8-byte big-endian: [0x00, 0x00, 0x00, 0x00, 0x03, 0x63, 0xB7, 0x65]
              *                     ↑--- High bytes (0) ---↑ ↑-- Low bytes --↑
-             * 
+             *
              * Big-Endian Explanation:
              * - Most significant byte first (network byte order)
              * - Ensures consistent interpretation across platforms
@@ -742,14 +1703,14 @@
                 // Step 1: Create an 8-byte buffer (64 bits total)
                 // TOTP specification requires 8-byte counter representation
                 const bytes = new ArrayBuffer(8);
-                
+
                 // Educational note: ArrayBuffer provides raw binary data storage.
                 // We need 8 bytes to match the HOTP/TOTP specification.
 
                 // Step 2: Create a DataView for controlled byte manipulation
                 // DataView allows us to specify byte ordering (endianness)
                 const view = new DataView(bytes);
-                
+
                 // Educational note: DataView provides methods for reading/writing
                 // different data types with explicit endianness control.
 
@@ -757,20 +1718,20 @@
                 // Offset 4 means we write to bytes 4-7, leaving bytes 0-3 as zeros
                 // false parameter specifies big-endian byte order
                 view.setUint32(4, num, false);
-                
+
                 // Educational breakdown:
                 // - setUint32: Write 32-bit unsigned integer (4 bytes)
                 // - Offset 4: Start at byte position 4 (leaves high bytes as 0)
                 // - num: The time counter value to encode
                 // - false: Use big-endian byte order (most significant byte first)
-                
+
                 // Educational note: We use offset 4 because JavaScript numbers
                 // are effectively 32-bit for our purposes, but TOTP requires
                 // 8-byte representation. The high 4 bytes remain zero.
 
                 // Step 4: Convert to Uint8Array for consistent byte handling
                 return new Uint8Array(bytes);
-                
+
                 // Educational summary:
                 // - Input: JavaScript number (time counter)
                 // - Process: Convert to 8-byte big-endian representation
@@ -781,21 +1742,21 @@
 
             /**
              * HMAC-SHA1 Generation - Educational Implementation
-             * 
+             *
              * HMAC (Hash-based Message Authentication Code) provides cryptographic
              * authentication using a secret key and SHA-1 hash function.
-             * 
+             *
              * Algorithm Overview:
              * 1. Import the shared secret as a cryptographic key
              * 2. Convert the time counter to an 8-byte big-endian array
              * 3. Generate HMAC-SHA1 signature using the key and counter
              * 4. Return the 20-byte HMAC result
-             * 
+             *
              * Security Properties:
              * - Authenticity: Only someone with the secret can generate valid HMACs
              * - Integrity: Any change in input produces completely different output
              * - Deterministic: Same inputs always produce same output
-             * 
+             *
              * TOTP Context:
              * - Secret: Shared between server and authenticator app
              * - Counter: Current time window (changes every 30 seconds)
@@ -811,29 +1772,29 @@
                     false,           // Not extractable (security best practice)
                     ['sign']         // Key usage: only for signing (generating HMAC)
                 );
-                
+
                 // Educational note: The secret is the shared key established during enrollment.
                 // It must be kept secure and synchronized between server and client.
 
                 // Step 2: Convert the time counter to bytes
                 // The counter represents the current time window (Unix time / 30 seconds)
                 const counterBytes = this.numberToBytes(counter);
-                
+
                 // Educational note: counterBytes is an 8-byte big-endian representation
                 // of the time counter. This ensures consistent byte ordering across platforms.
 
                 // Step 3: Generate the HMAC-SHA1 signature
                 // This produces a 160-bit (20-byte) cryptographic hash
                 const signature = await crypto.subtle.sign('HMAC', key, counterBytes);
-                
+
                 // Educational note: The HMAC operation combines:
                 // - The secret key (for authentication)
                 // - The time counter (for time-based uniqueness)
                 // - SHA-1 hash function (for cryptographic strength)
-                
+
                 // Step 4: Convert to Uint8Array for consistent handling
                 return new Uint8Array(signature);
-                
+
                 // Educational summary:
                 // - Input: Secret key + Time counter
                 // - Process: HMAC-SHA1 cryptographic operation
@@ -843,17 +1804,17 @@
 
             /**
              * Dynamic Truncation (RFC 4226) - Educational Implementation
-             * 
+             *
              * Dynamic truncation converts a 20-byte HMAC into a shorter numeric code.
              * It uses the last 4 bits of the HMAC to determine an offset, then extracts
              * 4 bytes starting from that offset to create a 31-bit integer.
-             * 
+             *
              * Algorithm Overview:
              * 1. Extract offset from last 4 bits of HMAC (0-15)
              * 2. Extract 4 consecutive bytes starting at offset
              * 3. Combine bytes into a 31-bit integer (MSB cleared for positive value)
              * 4. Return the integer for modulo operation
-             * 
+             *
              * Visual Example:
              * HMAC (20 bytes): [0x1f, 0x86, 0x98, 0x69, 0x0e, 0x02, 0xca, 0x16, 0x61, 0x85,
              *                   0x50, 0xef, 0x7f, 0x19, 0xda, 0x8e, 0x94, 0x5b, 0x55, 0x5a]
@@ -861,7 +1822,7 @@
              * Offset: 0x5a & 0x0f = 10 (last 4 bits)
              * 4 bytes at offset 10: [0x50, 0xef, 0x7f, 0x19]
              * Combined: 0x50ef7f19 & 0x7fffffff = 1358954265
-             * 
+             *
              * Security Properties:
              * - Unpredictable: Offset varies with each HMAC
              * - Uniform: All possible 4-byte combinations are equally likely
@@ -872,7 +1833,7 @@
                 // The last byte's lower 4 bits give us an offset between 0-15
                 // This ensures we can always extract 4 bytes (offset + 3 ≤ 19)
                 const offset = hmac[hmac.length - 1] & 0x0f;
-                
+
                 // Educational note: Using the HMAC itself to determine the offset
                 // makes the truncation unpredictable and prevents certain attacks.
                 // The offset range 0-15 ensures we never go beyond the 20-byte HMAC.
@@ -889,19 +1850,19 @@
                     // Byte 3: Full 8 bits (no shift)
                     (hmac[offset + 3] & 0xff)
                 );
-                
+
                 // Educational breakdown of bit operations:
                 // - & 0x7f: Clears the most significant bit (ensures positive number)
                 // - & 0xff: Masks to 8 bits (handles signed byte conversion in JavaScript)
                 // - << N: Left shift by N positions (multiplies by 2^N)
                 // - |: Bitwise OR combines the shifted bytes
-                
+
                 // Educational note: The result is a 31-bit positive integer.
                 // Clearing the MSB prevents issues with signed integer interpretation
                 // and ensures consistent behavior across different platforms.
-                
+
                 return code;
-                
+
                 // Educational summary:
                 // - Input: 20-byte HMAC
                 // - Process: Dynamic offset selection + 4-byte extraction
@@ -983,12 +1944,110 @@
             static clearUsedCodes() {
                 localStorage.removeItem('totp_used_codes');
             }
+
+            // Backup codes storage methods
+            static saveBackupCodes(codes) {
+                const data = {
+                    codes: codes.map(code => ({ code, used: false, createdAt: Date.now() })),
+                    generatedAt: Date.now()
+                };
+                localStorage.setItem('totp_backup_codes', JSON.stringify(data));
+            }
+
+            static getBackupCodes() {
+                const data = localStorage.getItem('totp_backup_codes');
+                return data ? JSON.parse(data) : null;
+            }
+
+            static markBackupCodeUsed(code) {
+                const data = this.getBackupCodes();
+                if (!data) return false;
+
+                const codeEntry = data.codes.find(c => c.code === code && !c.used);
+                if (codeEntry) {
+                    codeEntry.used = true;
+                    codeEntry.usedAt = Date.now();
+                    localStorage.setItem('totp_backup_codes', JSON.stringify(data));
+                    return true;
+                }
+                return false;
+            }
+
+            static clearBackupCodes() {
+                localStorage.removeItem('totp_backup_codes');
+            }
+        }
+
+        // Backup Code Generator Class
+        class BackupCodeGenerator {
+            constructor() {
+                this.characterSet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // 32 chars, avoiding confusing characters
+                this.codeLength = 10;
+                this.numberOfCodes = 8;
+            }
+
+            // Generate cryptographically secure backup codes
+            generateCodes() {
+                const codes = [];
+                for (let i = 0; i < this.numberOfCodes; i++) {
+                    codes.push(this.generateSingleCode());
+                }
+                return codes;
+            }
+
+            generateSingleCode() {
+                const randomBytes = new Uint8Array(this.codeLength);
+                crypto.getRandomValues(randomBytes);
+
+                let code = '';
+                for (let i = 0; i < this.codeLength; i++) {
+                    const index = randomBytes[i] % this.characterSet.length;
+                    code += this.characterSet[index];
+                }
+
+                // Format as XXXX-XXXX-XX for readability
+                return code.substring(0, 4) + '-' + code.substring(4, 8) + '-' + code.substring(8, 10);
+            }
+
+            // Calculate entropy for educational purposes
+            calculateEntropy() {
+                const bitsPerCharacter = Math.log2(this.characterSet.length);
+                const totalBits = bitsPerCharacter * this.codeLength;
+                return {
+                    bitsPerCharacter: bitsPerCharacter.toFixed(2),
+                    totalBitsPerCode: totalBits.toFixed(2),
+                    totalCombinations: Math.pow(this.characterSet.length, this.codeLength).toExponential(2)
+                };
+            }
+
+            // Verify a backup code
+            verifyCode(inputCode) {
+                const normalizedInput = inputCode.replace(/[-\s]/g, '').toUpperCase();
+                const backupData = StorageManager.getBackupCodes();
+
+                if (!backupData) {
+                    return { success: false, error: 'No backup codes found' };
+                }
+
+                const availableCode = backupData.codes.find(c =>
+                    c.code.replace(/[-\s]/g, '').toUpperCase() === normalizedInput && !c.used
+                );
+
+                if (availableCode) {
+                    StorageManager.markBackupCodeUsed(availableCode.code);
+                    return { success: true, code: availableCode.code };
+                } else {
+                    return { success: false, error: 'Invalid or already used backup code' };
+                }
+            }
         }
 
         // Global instances
         const totp = new TOTPGenerator();
+        const backupCodes = new BackupCodeGenerator();
         let currentSecret = null;
         let updateInterval = null;
+        let currentBackupCodes = null;
 
         // Page navigation
         function showPage(pageId) {
@@ -1058,12 +2117,12 @@
             const base32Secret = totp.base32Encode(secret);
             const hexSecret = Array.from(secret).map(b => b.toString(16).padStart(2, '0')).join('');
             const binarySecret = Array.from(secret).map(b => b.toString(2).padStart(8, '0')).join(' ');
-            
+
             const stepsHtml = `
                 <div class="algorithm-step">
                     <h4>🎲 Step 1: Cryptographically Secure Random Generation Algorithm</h4>
                     <p><strong>Purpose:</strong> Generate a high-entropy shared secret using cryptographically secure pseudorandom number generation.</p>
-                    
+
                     <details class="collapsible-section">
                         <summary>🔧 Algorithm Details</summary>
                         <div class="collapsible-content">
@@ -1073,7 +2132,7 @@
                             <div class="code-display">• <strong>Standard:</strong> Meets NIST SP 800-90A requirements</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>📊 Mathematical Properties</summary>
                         <div class="collapsible-content">
@@ -1083,7 +2142,7 @@
                             <div class="code-display">• <strong>Unpredictability:</strong> Next bit cannot be predicted with >50% probability</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>🔍 Step-by-Step Process</summary>
                         <div class="collapsible-content">
@@ -1093,19 +2152,19 @@
                             <div class="code-display">4. Total entropy: 20 × 8 = 160 bits of randomness</div>
                         </div>
                     </details>
-                    
+
                     <div class="code-display"><strong>📋 Generated Secret Data:</strong></div>
                     <div class="code-display"><strong>Raw bytes:</strong> [${Array.from(secret).join(', ')}]</div>
                     <div class="code-display"><strong>Binary:</strong> ${binarySecret}</div>
                     <div class="hex-display"><strong>Hexadecimal:</strong> ${hexSecret}</div>
-                    
+
                     <p><em>💡 Educational Note: This CSPRNG ensures the secret is computationally indistinguishable from true randomness, making brute force attacks infeasible (would take ~10^40 years with current technology).</em></p>
                 </div>
-                
+
                 <div class="algorithm-step">
                     <h4>🔤 Step 2: Base32 Encoding Algorithm (RFC 4648)</h4>
                     <p><strong>Purpose:</strong> Transform binary data into ASCII text using a 32-character alphabet for safe transmission and storage.</p>
-                    
+
                     <details class="collapsible-section">
                         <summary>🔧 Algorithm Specification</summary>
                         <div class="collapsible-content">
@@ -1115,7 +2174,7 @@
                             <div class="code-display">• <strong>Padding Character:</strong> '=' for alignment</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>📊 Mathematical Conversion</summary>
                         <div class="collapsible-content">
@@ -1125,7 +2184,7 @@
                             <div class="code-display">• <strong>Expansion:</strong> ~60% size increase from binary</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>🔍 Step-by-Step Encoding Process</summary>
                         <div class="collapsible-content">
@@ -1136,7 +2195,7 @@
                             <div class="code-display">5. <strong>Final Validation:</strong> Ensure output follows RFC 4648 format</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>🎯 Example Calculation (First 3 bytes)</summary>
                         <div class="collapsible-content">
@@ -1146,7 +2205,7 @@
                             <div class="code-display">5-bit groups: ${Array.from(secret).slice(0,3).map(b => b.toString(2).padStart(8, '0')).join('').match(/.{1,5}/g)?.map(chunk => chunk.padEnd(5, '0')).join(' | ') || ''}</div>
                         </div>
                     </details>
-                    
+
                     <details class="collapsible-section">
                         <summary>📋 Final Base32 Result</summary>
                         <div class="collapsible-content">
@@ -1155,10 +2214,10 @@
                             <div class="code-display"><strong>Padding:</strong> ${base32Secret.match(/=*$/)?.[0]?.length || 0} '=' characters</div>
                         </div>
                     </details>
-                    
+
                     <p><em>💡 Educational Note: Base32 avoids ambiguous characters (0/O, 1/I/l) and is case-insensitive, making it ideal for manual entry. The 5-bit grouping ensures clean mathematical conversion without bit loss.</em></p>
                 </div>
-                
+
                 <div class="algorithm-step">
                     <h4>🔗 Step 3: OTPAuth URL Generation</h4>
                     <p><strong>Purpose:</strong> Create a standardized URL that authenticator apps can parse to set up TOTP.</p>
@@ -1173,7 +2232,7 @@
                     <div class="code-display">• Period: 30 seconds (time window)</div>
                     <p><em>💡 Educational Note: This URL format is standardized across authenticator apps (Google Authenticator, Authy, etc.) ensuring compatibility.</em></p>
                 </div>
-                
+
                 <div class="algorithm-step" style="background: #fff5f5; border: 2px solid #fc8181; padding: 15px; border-radius: 8px;">
                     <h4>⚠️ Security Considerations</h4>
                     <p><strong>Secret Storage:</strong> Store securely on server (encrypted, access-controlled)</p>
@@ -1184,7 +2243,7 @@
             `;
 
             document.getElementById('secretSteps').innerHTML = stepsHtml;
-            
+
             // Restore collapsible states
             restoreCollapsibleStates(stepsContainer, savedStates);
             document.getElementById('secretSection').style.display = 'block';
@@ -1229,6 +2288,9 @@
                 return;
             }
 
+            // Initialize the static algorithm steps content
+            initializeAlgorithmSteps();
+
             updateAuthenticator();
             updateInterval = setInterval(updateAuthenticator, 1000);
         }
@@ -1242,13 +2304,243 @@
         }
 
         // Update authenticator display
-        async function updateAuthenticator() {
+        // Initialize algorithm steps structure (called once)
+        async function initializeAlgorithmSteps() {
             const secretData = StorageManager.getSecret();
             if (!secretData) return;
 
-            // Save current collapsible states
-            const algorithmContainer = document.getElementById('algorithmSteps');
-            const savedStates = saveCollapsibleStates(algorithmContainer);
+            const now = Math.floor(Date.now() / 1000);
+            const result = await totp.generateTOTP(secretData.secret, now);
+            const counterBytes = Array.from(totp.numberToBytes(result.counter));
+            const hmacBytes = result.hmac.match(/.{2}/g).map(hex => parseInt(hex, 16));
+            const lastByte = hmacBytes[hmacBytes.length - 1];
+            const offset = lastByte & 0x0f;
+
+            const stepsHtml = `
+                <div class="algorithm-step" id="step1-container">
+                    <h4>📅 Step 1: Time Counter Calculation (RFC 6238)</h4>
+                    <p><strong>Purpose:</strong> Convert current time into a discrete counter value that changes every 30 seconds.</p>
+                    <div class="code-display"><strong>Formula:</strong> T = floor(Unix_time / time_step)</div>
+                    <div class="code-display"><strong>Calculation:</strong> T = floor(<span id="current-timestamp">${now}</span> / 30) = <span id="current-counter">${result.counter}</span></div>
+                    <div class="code-display"><strong>Current Unix timestamp:</strong> <span id="timestamp-display">${now}</span> seconds since epoch</div>
+                    <div class="code-display"><strong>Time counter (T):</strong> <span id="counter-display">${result.counter}</span> (changes every 30 seconds)</div>
+
+                    <details class="collapsible-section">
+                        <summary>🔍 Detailed Algorithm Breakdown</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display"><strong>📊 Mathematical Foundation:</strong></div>
+                            <div class="code-display">• <strong>Unix Epoch:</strong> January 1, 1970, 00:00:00 UTC</div>
+                            <div class="code-display">• <strong>Current Date/Time:</strong> <span id="current-datetime">${new Date(now * 1000).toISOString()}</span></div>
+                            <div class="code-display">• <strong>Seconds Since Epoch:</strong> <span id="seconds-since-epoch">${now}</span></div>
+                            <div class="code-display">• <strong>Time Step:</strong> 30 seconds (RFC 6238 default)</div>
+
+                            <div class="code-display"><strong>🔍 Step-by-Step Process:</strong></div>
+                            <div class="code-display">1. <strong>Timestamp Retrieval:</strong> Get current Unix timestamp</div>
+                            <div class="code-display">2. <strong>Division by Time Step:</strong> <span id="division-calc">${now}</span> ÷ 30 = <span id="division-result">${(now / 30).toFixed(6)}</span></div>
+                            <div class="code-display">3. <strong>Floor Function Application:</strong> floor(<span id="floor-input">${(now / 30).toFixed(6)}</span>) = <span id="floor-result">${result.counter}</span></div>
+
+                            <div class="code-display"><strong>⏰ Time Window Analysis:</strong></div>
+                            <div class="code-display">• <strong>Current Window Start:</strong> <span id="window-start">${new Date(result.counter * 30 * 1000).toISOString()}</span></div>
+                            <div class="code-display">• <strong>Current Window End:</strong> <span id="window-end">${new Date((result.counter + 1) * 30 * 1000).toISOString()}</span></div>
+                            <div class="code-display">• <strong>Window Duration:</strong> 30 seconds</div>
+                            <div class="code-display">• <strong>Remaining in Window:</strong> <span id="remaining-seconds">${30 - (now % 30)}</span> seconds</div>
+
+                            <div class="code-display"><strong>🔄 Synchronization Properties:</strong></div>
+                            <div class="code-display">• <strong>Deterministic:</strong> Same input time always produces same counter</div>
+                            <div class="code-display">• <strong>Discrete:</strong> Counter changes in 30-second intervals</div>
+                            <div class="code-display">• <strong>Universal:</strong> All parties calculate same counter for same time</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step" id="step2-container">
+                    <h4>🔢 Step 2: Counter to Bytes Conversion</h4>
+                    <p><strong>Purpose:</strong> Convert the 64-bit counter into an 8-byte array in big-endian format for HMAC input.</p>
+                    <div class="code-display"><strong>Counter value:</strong> <span id="counter-value">${result.counter}</span></div>
+                    <div class="code-display"><strong>Hex representation:</strong> <span id="counter-hex">0x${result.counter.toString(16).padStart(16, '0').toUpperCase()}</span></div>
+                    <div class="code-display"><strong>Byte array:</strong> [<span id="counter-bytes">${counterBytes.join(', ')}</span>]</div>
+                    <div class="code-display"><strong>Binary:</strong> <span id="counter-binary">${counterBytes.map(b => b.toString(2).padStart(8, '0')).join(' ')}</span></div>
+
+                    <details class="collapsible-section">
+                        <summary>🔍 Detailed Conversion Process</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display"><strong>🔧 Algorithm Specification:</strong></div>
+                            <div class="code-display">• <strong>Input Format:</strong> 64-bit unsigned integer</div>
+                            <div class="code-display">• <strong>Output Format:</strong> 8-byte array (64 bits)</div>
+                            <div class="code-display">• <strong>Byte Order:</strong> Big-endian (network order)</div>
+                            <div class="code-display">• <strong>Standard:</strong> RFC 4226 compliance</div>
+
+                            <div class="code-display"><strong>📊 Mathematical Conversion:</strong></div>
+                            <div class="code-display">• <strong>Decimal:</strong> <span id="decimal-counter">${result.counter}</span></div>
+                            <div class="code-display">• <strong>Hexadecimal:</strong> <span id="hex-counter">0x${result.counter.toString(16).padStart(16, '0').toUpperCase()}</span></div>
+                            <div class="code-display">• <strong>Binary:</strong> <span id="binary-counter">${result.counter.toString(2).padStart(64, '0')}</span></div>
+                            <div class="code-display">• <strong>64-bit Padding:</strong> Leading zeros ensure 8-byte length</div>
+
+                            <div class="code-display"><strong>🔍 Step-by-Step Byte Extraction:</strong></div>
+                            ${counterBytes.map((byte, i) => `<div class="code-display">• <strong>Byte ${i}:</strong> <span id="byte-${i}">${byte}</span> (0x${byte.toString(16).padStart(2, '0').toUpperCase()}) = ${byte.toString(2).padStart(8, '0')} (bits ${(7-i)*8}-${(7-i)*8+7})</div>`).join('')}
+
+                            <div class="code-display"><strong>🌐 Endianness Explanation:</strong></div>
+                            <div class="code-display">• <strong>Big-endian Format:</strong> Most significant byte first</div>
+                            <div class="code-display">• <strong>Network Order:</strong> Standard for network protocols</div>
+                            <div class="code-display">• <strong>HMAC Requirement:</strong> Consistent byte ordering for cross-platform compatibility</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step" id="step3-container">
+                    <h4>🔐 Step 3: HMAC-SHA1 Computation (RFC 2104)</h4>
+                    <p><strong>Purpose:</strong> Generate a cryptographic hash using the shared secret and counter bytes.</p>
+                    <div class="code-display"><strong>Secret key:</strong> [Hidden for security - ${secretData.secret.length} bytes]</div>
+                    <div class="code-display"><strong>Message:</strong> [<span id="hmac-message">${counterBytes.join(', ')}</span>] (8 bytes)</div>
+                    <div class="code-display"><strong>HMAC result:</strong> <span id="hmac-result">${result.hmac}</span></div>
+                    <div class="code-display"><strong>HMAC bytes:</strong> [<span id="hmac-bytes">${hmacBytes.join(', ')}</span>]</div>
+
+                    <details class="collapsible-section">
+                        <summary>🔍 Detailed HMAC Process</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display"><strong>🔧 HMAC-SHA1 Specification:</strong></div>
+                            <div class="code-display">• <strong>Standard:</strong> RFC 2104 (HMAC) + RFC 3174 (SHA-1)</div>
+                            <div class="code-display">• <strong>Hash Function:</strong> SHA-1 (160-bit output)</div>
+                            <div class="code-display">• <strong>Block Size:</strong> 512 bits (64 bytes)</div>
+                            <div class="code-display">• <strong>Output Size:</strong> 160 bits (20 bytes)</div>
+
+                            <div class="code-display"><strong>📥 Input Components:</strong></div>
+                            <div class="code-display">• <strong>Secret Key:</strong> ${secretData.secret.length} bytes (shared secret)</div>
+                            <div class="code-display">• <strong>Message:</strong> 8 bytes (counter in big-endian)</div>
+                            <div class="code-display">• <strong>Key Length:</strong> ${secretData.secret.length} bytes</div>
+                            <div class="code-display">• <strong>Message Length:</strong> 8 bytes</div>
+
+                            <div class="code-display"><strong>🔄 HMAC Algorithm Steps:</strong></div>
+                            <div class="code-display">1. <strong>Key Padding:</strong> Pad or hash key to block size (64 bytes)</div>
+                            <div class="code-display">2. <strong>Inner Pad Creation:</strong> XOR key with 0x36 (repeated 64 times)</div>
+                            <div class="code-display">3. <strong>Outer Pad Creation:</strong> XOR key with 0x5C (repeated 64 times)</div>
+                            <div class="code-display">4. <strong>Inner Hash:</strong> SHA1(inner_pad || message)</div>
+                            <div class="code-display">5. <strong>Outer Hash:</strong> SHA1(outer_pad || inner_hash)</div>
+
+                            <div class="code-display"><strong>🔒 Security Properties:</strong></div>
+                            <div class="code-display">• <strong>Authentication:</strong> Verifies message authenticity</div>
+                            <div class="code-display">• <strong>Integrity:</strong> Detects message tampering</div>
+                            <div class="code-display">• <strong>Deterministic:</strong> Same inputs always produce same output</div>
+                            <div class="code-display">• <strong>Pseudorandom:</strong> Output appears random to attackers</div>
+                            <div class="code-display">• <strong>Collision Resistant:</strong> Difficult to find two inputs with same output</div>
+
+                            <div class="code-display"><strong>📊 Output Analysis:</strong></div>
+                            <div class="code-display">• <strong>Full HMAC (Hex):</strong> <span id="full-hmac">${result.hmac}</span></div>
+                            <div class="code-display">• <strong>Byte Array:</strong> [<span id="hmac-byte-array">${hmacBytes.join(', ')}</span>]</div>
+                            <div class="code-display">• <strong>Length:</strong> 20 bytes (160 bits)</div>
+                            <div class="code-display">• <strong>Entropy:</strong> High cryptographic randomness</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step" id="step4-container">
+                    <h4>✂️ Step 4: Dynamic Truncation (RFC 4226)</h4>
+                    <p><strong>Purpose:</strong> Extract a 4-byte segment from the HMAC result using dynamic offset.</p>
+                    <div class="code-display"><strong>Last HMAC byte:</strong> <span id="last-hmac-byte">${lastByte}</span> (0x${lastByte.toString(16).padStart(2, '0').toUpperCase()})</div>
+                    <div class="code-display"><strong>Offset calculation:</strong> <span id="offset-calc">${lastByte}</span> & 0x0F = <span id="offset-value">${offset}</span></div>
+                    <div class="code-display"><strong>4-byte extraction:</strong> bytes[<span id="extraction-range">${offset}:${offset+4}</span>] = [<span id="extracted-bytes">${hmacBytes.slice(offset, offset + 4).join(', ')}</span>]</div>
+                    <div class="code-display"><strong>32-bit integer:</strong> <span id="truncated-int">${(hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]}</span></div>
+                    <div class="code-display"><strong>31-bit result:</strong> <span id="truncated-result">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span> (MSB cleared)</div>
+
+                    <details class="collapsible-section">
+                        <summary>🔍 Detailed Truncation Process</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display"><strong>🔧 Dynamic Truncation Specification:</strong></div>
+                            <div class="code-display">• <strong>Standard:</strong> RFC 4226 Section 5.3</div>
+                            <div class="code-display">• <strong>Input:</strong> 20-byte HMAC result</div>
+                            <div class="code-display">• <strong>Output:</strong> 31-bit integer</div>
+                            <div class="code-display">• <strong>Method:</strong> Dynamic offset selection</div>
+
+                            <div class="code-display"><strong>📍 Offset Calculation:</strong></div>
+                            <div class="code-display">• <strong>Last Byte:</strong> <span id="last-byte-detail">${lastByte}</span> (0x${lastByte.toString(16).padStart(2, '0').toUpperCase()})</div>
+                            <div class="code-display">• <strong>Binary:</strong> <span id="last-byte-binary">${lastByte.toString(2).padStart(8, '0')}</span></div>
+                            <div class="code-display">• <strong>Lower 4 bits:</strong> <span id="lower-4-bits">${(lastByte & 0x0F).toString(2).padStart(4, '0')}</span> = <span id="offset-decimal">${offset}</span></div>
+                            <div class="code-display">• <strong>Offset Range:</strong> 0-15 (ensures 4 bytes available)</div>
+
+                            <div class="code-display"><strong>🔍 4-Byte Extraction:</strong></div>
+                            ${hmacBytes.slice(offset, offset + 4).map((byte, i) => `<div class="code-display">• <strong>Byte ${offset + i}:</strong> <span id="extract-byte-${i}">${byte}</span> (0x${byte.toString(16).padStart(2, '0').toUpperCase()}) = ${byte.toString(2).padStart(8, '0')}</div>`).join('')}
+
+                            <div class="code-display"><strong>🔢 32-bit Integer Construction:</strong></div>
+                            <div class="code-display">• <strong>Bit Shifting:</strong> (b0 << 24) | (b1 << 16) | (b2 << 8) | b3</div>
+                            <div class="code-display">• <strong>Calculation:</strong> (<span id="b0-shift">${hmacBytes[offset]}</span> << 24) | (<span id="b1-shift">${hmacBytes[offset + 1]}</span> << 16) | (<span id="b2-shift">${hmacBytes[offset + 2]}</span> << 8) | <span id="b3-value">${hmacBytes[offset + 3]}</span></div>
+                            <div class="code-display">• <strong>Result:</strong> <span id="int32-result">${(hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]}</span></div>
+
+                            <div class="code-display"><strong>🎭 MSB Clearing:</strong></div>
+                            <div class="code-display">• <strong>Purpose:</strong> Ensure positive 31-bit integer</div>
+                            <div class="code-display">• <strong>Operation:</strong> result & 0x7FFFFFFF</div>
+                            <div class="code-display">• <strong>31-bit Result:</strong> <span id="final-truncated">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span></div>
+
+                            <div class="code-display"><strong>🎯 Security Benefits:</strong></div>
+                            <div class="code-display">• <strong>Dynamic Offset:</strong> Prevents predictable truncation attacks</div>
+                            <div class="code-display">• <strong>Uniform Distribution:</strong> All 4-byte segments equally likely</div>
+                            <div class="code-display">• <strong>Collision Resistance:</strong> Different HMACs yield different truncations</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step" id="step5-container">
+                    <h4>🎯 Step 5: OTP Generation & Formatting</h4>
+                    <p><strong>Purpose:</strong> Convert the truncated integer into a 6-digit OTP with zero-padding.</p>
+                    <div class="code-display"><strong>Truncated value:</strong> <span id="otp-truncated">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span></div>
+                    <div class="code-display"><strong>Modulo operation:</strong> <span id="modulo-calc">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span> % 1000000 = <span id="raw-otp">${(((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) % 1000000}</span></div>
+                    <div class="code-display"><strong>Zero-padded OTP:</strong> <span id="final-otp">${result.otp}</span></div>
+
+                    <details class="collapsible-section">
+                        <summary>🔍 Detailed OTP Generation</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display"><strong>🔧 OTP Generation Specification:</strong></div>
+                            <div class="code-display">• <strong>Standard:</strong> RFC 4226 Section 5.3</div>
+                            <div class="code-display">• <strong>Input Range:</strong> 0 to 2^31-1 (31-bit integer)</div>
+                            <div class="code-display">• <strong>Output Range:</strong> 000000 to 999999 (6 digits)</div>
+                            <div class="code-display">• <strong>Digits:</strong> 6 (configurable, but 6 is standard)</div>
+
+                            <div class="code-display"><strong>📊 Modulo Operation:</strong></div>
+                            <div class="code-display">• <strong>Formula:</strong> OTP = truncated_value % 10^digits</div>
+                            <div class="code-display">• <strong>Digits:</strong> 6 (10^6 = 1,000,000)</div>
+                            <div class="code-display">• <strong>Modulus:</strong> 1,000,000</div>
+                            <div class="code-display">• <strong>Input:</strong> <span id="modulo-input">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span></div>
+
+                            <div class="code-display"><strong>🔍 Step-by-Step Calculation:</strong></div>
+                            <div class="code-display">1. <strong>Division:</strong> <span id="division-step">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span> ÷ 1,000,000 = <span id="quotient">${Math.floor((((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) / 1000000)}</span></div>
+                            <div class="code-display">2. <strong>Remainder:</strong> <span id="remainder-calc">${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF}</span> % 1,000,000 = <span id="remainder-result">${(((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) % 1000000}</span></div>
+                            <div class="code-display">3. <strong>Raw OTP:</strong> <span id="raw-otp-value">${(((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) % 1000000}</span></div>
+
+                            <div class="code-display"><strong>🔢 Zero-Padding Process:</strong></div>
+                            <div class="code-display">• <strong>Raw Length:</strong> <span id="raw-length">${((((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) % 1000000).toString().length}</span> digits</div>
+                            <div class="code-display">• <strong>Required Length:</strong> 6 digits</div>
+                            <div class="code-display">• <strong>Padding Needed:</strong> <span id="padding-needed">${6 - ((((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF) % 1000000).toString().length}</span> leading zeros</div>
+                            <div class="code-display">• <strong>JavaScript Method:</strong> .padStart(6, '0')</div>
+                            <div class="code-display">• <strong>Final OTP:</strong> <span id="padded-otp">${result.otp}</span></div>
+
+                            <div class="code-display"><strong>⏰ Validity Window:</strong></div>
+                            <div class="code-display">• <strong>Current Window:</strong> T = <span id="validity-counter">${result.counter}</span></div>
+                            <div class="code-display">• <strong>Window Start:</strong> <span id="validity-start">${new Date(result.counter * 30 * 1000).toISOString()}</span></div>
+                            <div class="code-display">• <strong>Window End:</strong> <span id="validity-end">${new Date((result.counter + 1) * 30 * 1000).toISOString()}</span></div>
+                            <div class="code-display">• <strong>Remaining Time:</strong> <span id="validity-remaining">${30 - (now % 30)}</span> seconds</div>
+
+                            <div class="code-display"><strong>📊 Statistical Properties:</strong></div>
+                            <div class="code-display">• <strong>Total Combinations:</strong> 1,000,000 (10^6)</div>
+                            <div class="code-display">• <strong>Random Guess Probability:</strong> 1 in 1,000,000 (0.0001%)</div>
+                            <div class="code-display">• <strong>Distribution:</strong> Uniform across 000000-999999 range</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step">
+                    <h4>🔄 Complete TOTP Flow Summary</h4>
+                    <p><strong>Input:</strong> Shared Secret + Current Time</p>
+                    <p><strong>Process:</strong> Time → Counter → HMAC → Truncation → Modulo → Padding</p>
+                    <p><strong>Output:</strong> 6-digit OTP valid for 30 seconds</p>
+                    <p><strong>Security:</strong> Time-synchronized, cryptographically secure, single-use within window</p>
+                </div>
+            `;
+
+            document.getElementById('algorithmSteps').innerHTML = stepsHtml;
+        }
+
+        async function updateAuthenticator() {
+            const secretData = StorageManager.getSecret();
+            if (!secretData) return;
 
             const now = Math.floor(Date.now() / 1000);
             const result = await totp.generateTOTP(secretData.secret, now);
@@ -1264,252 +2556,100 @@
             const progress = ((30 - secondsLeft) / 30) * 100;
             document.getElementById('progressFill').style.width = `${progress}%`;
 
-            // Update algorithm steps with comprehensive educational explanations
+            // Update only the dynamic values in the existing structure
             const counterBytes = Array.from(totp.numberToBytes(result.counter));
             const hmacBytes = result.hmac.match(/.{2}/g).map(hex => parseInt(hex, 16));
             const lastByte = hmacBytes[hmacBytes.length - 1];
             const offset = lastByte & 0x0f;
-            
-            const stepsHtml = `
-                <div class="algorithm-step ${secondsLeft <= 5 ? 'step-highlight' : ''}">
-                    <h4>📅 Step 1: Time Counter Calculation (RFC 6238)</h4>
-                    <p><strong>Purpose:</strong> Convert current time into a discrete counter value that changes every 30 seconds.</p>
-                    <div class="code-display"><strong>Formula:</strong> T = floor(Unix_time / time_step)</div>
-                    <div class="code-display"><strong>Calculation:</strong> T = floor(${now} / 30) = ${result.counter}</div>
-                    <div class="code-display"><strong>Current Unix timestamp:</strong> ${now} seconds since epoch</div>
-                    <div class="code-display"><strong>Time counter (T):</strong> ${result.counter} (changes every 30 seconds)</div>
-                    <p><em>💡 Educational Note: This ensures both client and server generate the same counter value within the same 30-second window, regardless of minor clock differences.</em></p>
-                    
-                    <details class="collapsible-section">
-                        <summary>🔍 Detailed Algorithm Breakdown</summary>
-                        <div class="collapsible-content">
-                            <h5>📊 Mathematical Foundation</h5>
-                            <div class="code-display"><strong>Unix Epoch:</strong> January 1, 1970, 00:00:00 UTC</div>
-                            <div class="code-display"><strong>Current Date/Time:</strong> ${new Date(now * 1000).toISOString()}</div>
-                            <div class="code-display"><strong>Seconds Since Epoch:</strong> ${now}</div>
-                            <div class="code-display"><strong>Time Step (T0):</strong> 30 seconds (RFC 6238 default)</div>
-                            
-                            <h5>⚙️ Step-by-Step Process</h5>
-                            <div class="code-display"><strong>Step 1a:</strong> Get current Unix timestamp → ${now}</div>
-                            <div class="code-display"><strong>Step 1b:</strong> Divide by time step → ${now} ÷ 30 = ${(now / 30).toFixed(6)}</div>
-                            <div class="code-display"><strong>Step 1c:</strong> Apply floor function → floor(${(now / 30).toFixed(6)}) = ${result.counter}</div>
-                            
-                            <h5>🕐 Time Window Analysis</h5>
-                            <div class="code-display"><strong>Current Window Start:</strong> ${new Date(result.counter * 30 * 1000).toISOString()}</div>
-                            <div class="code-display"><strong>Current Window End:</strong> ${new Date((result.counter * 30 + 29) * 1000).toISOString()}</div>
-                            <div class="code-display"><strong>Window Duration:</strong> 30 seconds</div>
-                            <div class="code-display"><strong>Seconds Remaining:</strong> ${secondsLeft} seconds</div>
-                            
-                            <h5>🔄 Synchronization Properties</h5>
-                            <div class="code-display"><strong>Deterministic:</strong> Same timestamp always produces same counter</div>
-                            <div class="code-display"><strong>Discrete:</strong> Counter changes only at 30-second boundaries</div>
-                            <div class="code-display"><strong>Universal:</strong> All devices using same time produce same counter</div>
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="algorithm-step">
-                    <h4>🔢 Step 2: Counter to Bytes Conversion</h4>
-                    <p><strong>Purpose:</strong> Convert the 64-bit counter into an 8-byte big-endian array for HMAC input.</p>
-                    <div class="code-display"><strong>Counter value:</strong> ${result.counter} (decimal)</div>
-                    <div class="code-display"><strong>As 64-bit big-endian:</strong> [${counterBytes.map(b => '0x' + b.toString(16).padStart(2, '0')).join(', ')}]</div>
-                    <div class="code-display"><strong>Binary representation:</strong> ${counterBytes.map(b => b.toString(2).padStart(8, '0')).join(' ')}</div>
-                    <p><em>💡 Educational Note: Big-endian format ensures consistent byte ordering across different platforms. The counter is padded to 8 bytes with leading zeros.</em></p>
-                    
-                    <details class="collapsible-section">
-                        <summary>🔍 Detailed Conversion Process</summary>
-                        <div class="collapsible-content">
-                            <h5>📋 Algorithm Specification</h5>
-                            <div class="code-display"><strong>Input:</strong> 32-bit counter value (${result.counter})</div>
-                            <div class="code-display"><strong>Output:</strong> 8-byte big-endian array</div>
-                            <div class="code-display"><strong>Byte Order:</strong> Big-endian (most significant byte first)</div>
-                            <div class="code-display"><strong>Standard:</strong> RFC 4226 HOTP specification</div>
-                            
-                            <h5>🔢 Mathematical Conversion</h5>
-                            <div class="code-display"><strong>Decimal:</strong> ${result.counter}</div>
-                            <div class="code-display"><strong>Hexadecimal:</strong> 0x${result.counter.toString(16).toUpperCase().padStart(8, '0')}</div>
-                            <div class="code-display"><strong>32-bit Binary:</strong> ${result.counter.toString(2).padStart(32, '0')}</div>
-                            <div class="code-display"><strong>64-bit Padded:</strong> ${'0'.repeat(32)}${result.counter.toString(2).padStart(32, '0')}</div>
-                            
-                            <h5>⚙️ Step-by-Step Byte Extraction</h5>
-                            ${counterBytes.map((byte, index) => {
-                                const bitPosition = (7 - index) * 8;
-                                return `<div class="code-display"><strong>Byte ${index}:</strong> 0x${byte.toString(16).padStart(2, '0')} = ${byte.toString(2).padStart(8, '0')} (bits ${bitPosition + 7}-${bitPosition})</div>`;
-                            }).join('')}
-                            
-                            <h5>🌐 Endianness Explanation</h5>
-                            <div class="code-display"><strong>Big-Endian:</strong> Most significant byte stored first</div>
-                            <div class="code-display"><strong>Network Order:</strong> Standard for network protocols</div>
-                            <div class="code-display"><strong>Cross-Platform:</strong> Ensures consistent interpretation</div>
-                            <div class="code-display"><strong>HMAC Requirement:</strong> Binary input must be byte-ordered</div>
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="algorithm-step">
-                    <h4>🔐 Step 3: HMAC-SHA1 Computation (RFC 2104)</h4>
-                    <p><strong>Purpose:</strong> Generate a cryptographically secure hash using the shared secret and time counter.</p>
-                    <div class="code-display"><strong>Algorithm:</strong> HMAC-SHA1(shared_secret, counter_bytes)</div>
-                    <div class="code-display"><strong>Input:</strong> Secret key + 8-byte counter</div>
-                    <div class="hex-display"><strong>HMAC-SHA1 Result (20 bytes):</strong><br>${result.hmac.match(/.{2}/g).join(' ')}</div>
-                    <div class="code-display"><strong>Security Properties:</strong> Deterministic, unpredictable without secret, tamper-evident</div>
-                    <p><em>💡 Educational Note: HMAC provides both authentication and integrity. The same inputs always produce the same output, but without the secret key, the output appears random.</em></p>
-                    
-                    <details class="collapsible-section">
-                        <summary>🔍 Detailed HMAC Process</summary>
-                        <div class="collapsible-content">
-                            <h5>📋 HMAC-SHA1 Specification</h5>
-                            <div class="code-display"><strong>Standard:</strong> RFC 2104 (HMAC: Keyed-Hashing for Message Authentication)</div>
-                            <div class="code-display"><strong>Hash Function:</strong> SHA-1 (160-bit output)</div>
-                            <div class="code-display"><strong>Block Size:</strong> 64 bytes (512 bits)</div>
-                            <div class="code-display"><strong>Output Size:</strong> 20 bytes (160 bits)</div>
-                            
-                            <h5>🔑 Input Components</h5>
-                            <div class="code-display"><strong>Secret Key:</strong> Base32-decoded shared secret</div>
-                            <div class="code-display"><strong>Message:</strong> 8-byte counter [${counterBytes.map(b => '0x' + b.toString(16).padStart(2, '0')).join(', ')}]</div>
-                            <div class="code-display"><strong>Key Length:</strong> Variable (typically 10-20 bytes for TOTP)</div>
-                            <div class="code-display"><strong>Message Length:</strong> 8 bytes (fixed for TOTP)</div>
-                            
-                            <h5>⚙️ HMAC Algorithm Steps</h5>
-                            <div class="code-display"><strong>Step 3a:</strong> Pad key to block size (64 bytes)</div>
-                            <div class="code-display"><strong>Step 3b:</strong> Create inner pad (key ⊕ 0x36...)</div>
-                            <div class="code-display"><strong>Step 3c:</strong> Create outer pad (key ⊕ 0x5C...)</div>
-                            <div class="code-display"><strong>Step 3d:</strong> Inner hash = SHA1(inner_pad || message)</div>
-                            <div class="code-display"><strong>Step 3e:</strong> Outer hash = SHA1(outer_pad || inner_hash)</div>
-                            
-                            <h5>🔒 Security Properties</h5>
-                            <div class="code-display"><strong>Authentication:</strong> Verifies message came from key holder</div>
-                            <div class="code-display"><strong>Integrity:</strong> Detects any message modification</div>
-                            <div class="code-display"><strong>Deterministic:</strong> Same inputs always produce same output</div>
-                            <div class="code-display"><strong>Pseudorandom:</strong> Output appears random without key</div>
-                            <div class="code-display"><strong>Collision Resistant:</strong> Hard to find different inputs with same output</div>
-                            
-                            <h5>📊 Output Analysis</h5>
-                            <div class="hex-display"><strong>Full HMAC (hex):</strong><br>${result.hmac}</div>
-                            <div class="code-display"><strong>Byte Array:</strong> [${hmacBytes.map(b => b.toString()).join(', ')}]</div>
-                            <div class="code-display"><strong>Length:</strong> 20 bytes (160 bits)</div>
-                            <div class="code-display"><strong>Entropy:</strong> ~160 bits of cryptographic strength</div>
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="algorithm-step">
-                    <h4>✂️ Step 4: Dynamic Truncation (RFC 4226)</h4>
-                    <p><strong>Purpose:</strong> Convert the 20-byte HMAC into a shorter numeric value using a dynamic offset.</p>
-                    <div class="code-display"><strong>Last HMAC byte:</strong> 0x${lastByte.toString(16).padStart(2, '0')} = ${lastByte.toString(2).padStart(8, '0')} (binary)</div>
-                    <div class="code-display"><strong>Dynamic offset:</strong> ${lastByte.toString(2).padStart(8, '0').slice(-4)} (last 4 bits) = ${offset}</div>
-                    <div class="code-display"><strong>4 bytes at offset ${offset}:</strong> [${hmacBytes.slice(offset, offset + 4).map(b => '0x' + b.toString(16).padStart(2, '0')).join(', ')}]</div>
-                    <div class="code-display"><strong>Combined 31-bit value:</strong> ${result.truncatedValue} (MSB cleared for positive number)</div>
-                    <p><em>💡 Educational Note: The dynamic offset (0-15) ensures unpredictability and prevents certain cryptographic attacks. We always have enough bytes since offset + 3 ≤ 19.</em></p>
-                    
-                    <details class="collapsible-section">
-                        <summary>🔍 Detailed Truncation Process</summary>
-                        <div class="collapsible-content">
-                            <h5>📋 Dynamic Truncation Specification</h5>
-                            <div class="code-display"><strong>Standard:</strong> RFC 4226 Section 5.4 (Dynamic Truncation)</div>
-                            <div class="code-display"><strong>Input:</strong> 20-byte HMAC-SHA1 output</div>
-                            <div class="code-display"><strong>Output:</strong> 31-bit positive integer</div>
-                            <div class="code-display"><strong>Purpose:</strong> Extract deterministic numeric value from hash</div>
-                            
-                            <h5>🎯 Offset Calculation</h5>
-                            <div class="code-display"><strong>Last Byte (index 19):</strong> 0x${lastByte.toString(16).padStart(2, '0')} = ${lastByte} (decimal)</div>
-                            <div class="code-display"><strong>Binary Representation:</strong> ${lastByte.toString(2).padStart(8, '0')}</div>
-                            <div class="code-display"><strong>Bit Positions:</strong> [7][6][5][4][3][2][1][0]</div>
-                            <div class="code-display"><strong>Last 4 Bits:</strong> ${lastByte.toString(2).padStart(8, '0').slice(-4)} = ${offset} (offset)</div>
-                            <div class="code-display"><strong>Offset Range:</strong> 0-15 (ensures offset + 3 ≤ 19)</div>
-                            
-                            <h5>⚙️ 4-Byte Extraction</h5>
-                            ${hmacBytes.slice(offset, offset + 4).map((byte, index) => {
-                                return `<div class="code-display"><strong>Byte ${offset + index}:</strong> 0x${byte.toString(16).padStart(2, '0')} = ${byte.toString(2).padStart(8, '0')} = ${byte}</div>`;
-                            }).join('')}
-                            
-                            <h5>🔢 32-bit Integer Construction</h5>
-                            <div class="code-display"><strong>Byte 0 (MSB):</strong> ${hmacBytes[offset].toString(2).padStart(8, '0')} << 24 = ${(hmacBytes[offset] << 24) >>> 0}</div>
-                            <div class="code-display"><strong>Byte 1:</strong> ${hmacBytes[offset + 1].toString(2).padStart(8, '0')} << 16 = ${(hmacBytes[offset + 1] << 16) >>> 0}</div>
-                            <div class="code-display"><strong>Byte 2:</strong> ${hmacBytes[offset + 2].toString(2).padStart(8, '0')} << 8 = ${(hmacBytes[offset + 2] << 8) >>> 0}</div>
-                            <div class="code-display"><strong>Byte 3 (LSB):</strong> ${hmacBytes[offset + 3].toString(2).padStart(8, '0')} << 0 = ${hmacBytes[offset + 3]}</div>
-                            
-                            <h5>🎭 MSB Clearing (31-bit Result)</h5>
-                            <div class="code-display"><strong>32-bit Combined:</strong> ${((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) >>> 0}</div>
-                            <div class="code-display"><strong>MSB Mask:</strong> 0x7FFFFFFF (clears bit 31)</div>
-                            <div class="code-display"><strong>31-bit Result:</strong> ${result.truncatedValue} (always positive)</div>
-                            <div class="code-display"><strong>Binary (31-bit):</strong> ${result.truncatedValue.toString(2).padStart(31, '0')}</div>
-                            
-                            <h5>🛡️ Security Benefits</h5>
-                            <div class="code-display"><strong>Dynamic Offset:</strong> Prevents predictable byte selection</div>
-                            <div class="code-display"><strong>Uniform Distribution:</strong> All 4-byte combinations equally likely</div>
-                            <div class="code-display"><strong>Collision Resistance:</strong> Inherited from underlying HMAC</div>
-                            <div class="code-display"><strong>Deterministic:</strong> Same HMAC always produces same truncation</div>
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="algorithm-step">
-                    <h4>🎯 Step 5: OTP Generation & Formatting</h4>
-                    <p><strong>Purpose:</strong> Convert the large integer into a user-friendly 6-digit code.</p>
-                    <div class="code-display"><strong>Modulo operation:</strong> ${result.truncatedValue} mod 10^6 = ${parseInt(result.otp)}</div>
-                    <div class="code-display"><strong>Zero-padded result:</strong> ${result.otp} (6 digits)</div>
-                    <div class="code-display"><strong>Valid for:</strong> ${secondsLeft} more seconds (until next 30-second window)</div>
-                    <p><em>💡 Educational Note: Modulo 10^6 ensures exactly 6 digits (000000-999999). Zero-padding maintains consistent length for user input.</em></p>
-                    
-                    <details class="collapsible-section">
-                        <summary>🔍 Detailed OTP Generation</summary>
-                        <div class="collapsible-content">
-                            <h5>📋 OTP Generation Specification</h5>
-                            <div class="code-display"><strong>Standard:</strong> RFC 4226 Section 5.3 (Generating an HOTP value)</div>
-                            <div class="code-display"><strong>Input:</strong> 31-bit truncated value (${result.truncatedValue})</div>
-                            <div class="code-display"><strong>Output:</strong> 6-digit decimal string</div>
-                            <div class="code-display"><strong>Range:</strong> 000000 - 999999 (1,000,000 possible values)</div>
-                            
-                            <h5>🔢 Modulo Operation</h5>
-                            <div class="code-display"><strong>Formula:</strong> OTP = truncated_value mod 10^digits</div>
-                            <div class="code-display"><strong>Digits:</strong> 6 (configurable, typically 6-8)</div>
-                            <div class="code-display"><strong>Modulus:</strong> 10^6 = 1,000,000</div>
-                            <div class="code-display"><strong>Calculation:</strong> ${result.truncatedValue} mod 1,000,000 = ${parseInt(result.otp)}</div>
-                            
-                            <h5>⚙️ Step-by-Step Calculation</h5>
-                            <div class="code-display"><strong>Input Value:</strong> ${result.truncatedValue}</div>
-                            <div class="code-display"><strong>Division:</strong> ${result.truncatedValue} ÷ 1,000,000 = ${Math.floor(result.truncatedValue / 1000000)} remainder ${result.truncatedValue % 1000000}</div>
-                            <div class="code-display"><strong>Remainder:</strong> ${result.truncatedValue % 1000000} (this is our OTP)</div>
-                            <div class="code-display"><strong>Raw Result:</strong> ${parseInt(result.otp)} (may be less than 6 digits)</div>
-                            
-                            <h5>🎨 Zero-Padding Process</h5>
-                            <div class="code-display"><strong>Raw Length:</strong> ${parseInt(result.otp).toString().length} digits</div>
-                            <div class="code-display"><strong>Required Length:</strong> 6 digits</div>
-                            <div class="code-display"><strong>Padding Needed:</strong> ${6 - parseInt(result.otp).toString().length} leading zeros</div>
-                            <div class="code-display"><strong>Padded Result:</strong> ${result.otp}</div>
-                            <div class="code-display"><strong>JavaScript Method:</strong> .toString().padStart(6, '0')</div>
-                            
-                            <h5>⏰ Validity Window</h5>
-                            <div class="code-display"><strong>Current Window:</strong> ${result.counter} (T = ${result.counter})</div>
-                            <div class="code-display"><strong>Window Start:</strong> ${new Date(result.counter * 30 * 1000).toISOString()}</div>
-                            <div class="code-display"><strong>Window End:</strong> ${new Date((result.counter * 30 + 29) * 1000).toISOString()}</div>
-                            <div class="code-display"><strong>Remaining Time:</strong> ${secondsLeft} seconds</div>
-                            <div class="code-display"><strong>Next Code At:</strong> ${new Date((result.counter + 1) * 30 * 1000).toISOString()}</div>
-                            
-                            <h5>📊 Statistical Properties</h5>
-                            <div class="code-display"><strong>Total Combinations:</strong> 1,000,000 (10^6)</div>
-                            <div class="code-display"><strong>Probability of Guess:</strong> 1 in 1,000,000 (0.0001%)</div>
-                            <div class="code-display"><strong>Uniform Distribution:</strong> Each code equally likely</div>
-                            <div class="code-display"><strong>Collision Probability:</strong> Very low due to HMAC properties</div>
-                        </div>
-                    </details>
-                </div>
-                
-                <div class="algorithm-step" style="background: #e6fffa; border: 2px solid #38b2ac; padding: 15px; border-radius: 8px; margin-top: 20px;">
-                    <h4>🔄 Complete TOTP Flow Summary</h4>
-                    <p><strong>Input:</strong> Shared Secret + Current Time</p>
-                    <p><strong>Process:</strong> Time → Counter → HMAC → Truncation → Modulo → Padding</p>
-                    <p><strong>Output:</strong> 6-digit OTP valid for 30 seconds</p>
-                    <p><strong>Security:</strong> Time-synchronized, cryptographically secure, single-use within window</p>
-                </div>
-            `;
+            const truncatedValue = ((hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]) & 0x7FFFFFFF;
+            const rawOtp = truncatedValue % 1000000;
 
-            document.getElementById('algorithmSteps').innerHTML = stepsHtml;
-            
-            // Restore collapsible states
-            restoreCollapsibleStates(algorithmContainer, savedStates);
+            // Update dynamic elements without regenerating HTML
+            const updateElement = (id, value) => {
+                const element = document.getElementById(id);
+                if (element) element.textContent = value;
+            };
 
+            // Step 1 updates
+            updateElement('current-timestamp', now);
+            updateElement('current-counter', result.counter);
+            updateElement('timestamp-display', now);
+            updateElement('counter-display', result.counter);
+            updateElement('current-datetime', new Date(now * 1000).toISOString());
+            updateElement('seconds-since-epoch', now);
+            updateElement('division-calc', now);
+            updateElement('division-result', (now / 30).toFixed(6));
+            updateElement('floor-input', (now / 30).toFixed(6));
+            updateElement('floor-result', result.counter);
+            updateElement('window-start', new Date(result.counter * 30 * 1000).toISOString());
+            updateElement('window-end', new Date((result.counter + 1) * 30 * 1000).toISOString());
+            updateElement('remaining-seconds', secondsLeft);
+
+            // Step 2 updates
+            updateElement('counter-value', result.counter);
+            updateElement('counter-hex', '0x' + result.counter.toString(16).padStart(16, '0').toUpperCase());
+            updateElement('counter-bytes', counterBytes.join(', '));
+            updateElement('counter-binary', counterBytes.map(b => b.toString(2).padStart(8, '0')).join(' '));
+            updateElement('decimal-counter', result.counter);
+            updateElement('hex-counter', '0x' + result.counter.toString(16).padStart(16, '0').toUpperCase());
+            updateElement('binary-counter', result.counter.toString(2).padStart(64, '0'));
+            counterBytes.forEach((byte, i) => {
+                updateElement(`byte-${i}`, byte);
+            });
+
+            // Step 3 updates
+            updateElement('hmac-message', counterBytes.join(', '));
+            updateElement('hmac-result', result.hmac);
+            updateElement('hmac-bytes', hmacBytes.join(', '));
+            updateElement('full-hmac', result.hmac);
+            updateElement('hmac-byte-array', hmacBytes.join(', '));
+
+            // Step 4 updates
+            updateElement('last-hmac-byte', lastByte);
+            updateElement('offset-calc', lastByte);
+            updateElement('offset-value', offset);
+            updateElement('extraction-range', `${offset}:${offset+4}`);
+            updateElement('extracted-bytes', hmacBytes.slice(offset, offset + 4).join(', '));
+            updateElement('truncated-int', (hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]);
+            updateElement('truncated-result', truncatedValue);
+            updateElement('last-byte-detail', lastByte);
+            updateElement('last-byte-binary', lastByte.toString(2).padStart(8, '0'));
+            updateElement('lower-4-bits', (lastByte & 0x0F).toString(2).padStart(4, '0'));
+            updateElement('offset-decimal', offset);
+            hmacBytes.slice(offset, offset + 4).forEach((byte, i) => {
+                updateElement(`extract-byte-${i}`, byte);
+            });
+            updateElement('b0-shift', hmacBytes[offset]);
+            updateElement('b1-shift', hmacBytes[offset + 1]);
+            updateElement('b2-shift', hmacBytes[offset + 2]);
+            updateElement('b3-value', hmacBytes[offset + 3]);
+            updateElement('int32-result', (hmacBytes[offset] << 24) | (hmacBytes[offset + 1] << 16) | (hmacBytes[offset + 2] << 8) | hmacBytes[offset + 3]);
+            updateElement('final-truncated', truncatedValue);
+
+            // Step 5 updates
+            updateElement('otp-truncated', truncatedValue);
+            updateElement('modulo-calc', truncatedValue);
+            updateElement('raw-otp', rawOtp);
+            updateElement('final-otp', result.otp);
+            updateElement('modulo-input', truncatedValue);
+            updateElement('division-step', truncatedValue);
+            updateElement('quotient', Math.floor(truncatedValue / 1000000));
+            updateElement('remainder-calc', truncatedValue);
+            updateElement('remainder-result', rawOtp);
+            updateElement('raw-otp-value', rawOtp);
+            updateElement('raw-length', rawOtp.toString().length);
+            updateElement('padding-needed', 6 - rawOtp.toString().length);
+            updateElement('padded-otp', result.otp);
+            updateElement('validity-counter', result.counter);
+            updateElement('validity-start', new Date(result.counter * 30 * 1000).toISOString());
+            updateElement('validity-end', new Date((result.counter + 1) * 30 * 1000).toISOString());
+            updateElement('validity-remaining', secondsLeft);
+
+            // Update step highlighting
+            const step1 = document.getElementById('step1-container');
+            if (step1) {
+                step1.className = `algorithm-step ${secondsLeft <= 5 ? 'step-highlight' : ''}`;
+            }
             // Update time windows
             const prevResult = await totp.generateTOTP(secretData.secret, now - 30);
             const nextResult = await totp.generateTOTP(secretData.secret, now + 30);
@@ -1536,7 +2676,7 @@
             // Show detailed verification process
             const now = Math.floor(Date.now() / 1000);
             const verificationSteps = [];
-            
+
             // Step 1: Input validation
             verificationSteps.push(`
                 <div class="algorithm-step">
@@ -1552,7 +2692,7 @@
             // Step 2: Replay protection check
             const usedCodes = StorageManager.getUsedCodes();
             const isReplay = usedCodes.some(item => item.code === inputCode);
-            
+
             verificationSteps.push(`
                 <div class="algorithm-step">
                     <h4>🛡️ Step 2: Replay Protection Check</h4>
@@ -1591,7 +2731,7 @@
                 const timestamp = now + (offset * 30);
                 const result = await totp.generateTOTP(secretData.secret, timestamp);
                 const windowName = offset === -1 ? 'T-1 (Previous)' : offset === 0 ? 'T (Current)' : 'T+1 (Next)';
-                
+
                 windowResults.push({
                     offset,
                     windowName,
@@ -1610,7 +2750,7 @@
 
             // Step 4: Show window comparison results
             const windowComparison = windowResults.map(window => `
-                <div class="code-display" style="${window.matches ? 'background: #c6f6d5; border: 2px solid #38a169;' : 'background: #fed7d7; border: 1px solid #fc8181;'}">
+                <div class="code-display">
                     <strong>${window.windowName}:</strong> Generated ${window.generatedCode} ${window.matches ? '✅ MATCH' : '❌ No match'}<br>
                     <small>Counter: ${window.counter}, Timestamp: ${window.timestamp}</small>
                 </div>
@@ -1618,11 +2758,11 @@
 
             verificationSteps.push(`
                 <div class="algorithm-step">
-                    <h4>🔄 Step 4: Time Window Comparison</h4>
-                    <p><strong>Purpose:</strong> Compare input code against server-generated codes for each time window.</p>
+                    <h4>🔄 Step 4: Multi-Window Verification Analysis</h4>
+                    <p><strong>Critical Process:</strong> Cross-reference user input against TOTP codes generated for current, previous, and next time windows to account for clock drift and network delays.</p>
                     ${windowComparison}
-                    <div class="code-display"><strong>Verification Result:</strong> ${isValid ? '✅ Valid' : '❌ Invalid'}</div>
-                    ${isValid ? `<div class="code-display"><strong>Matched Window:</strong> ${windowResults.find(w => w.matches).windowName}</div>` : ''}
+                    <div class="code-display" style="background: padding: 10px; margin: 8px 0; font-weight: bold;"><strong>🎯 FINAL VERDICT:</strong> ${isValid ? '✅ AUTHENTICATION SUCCESSFUL' : '❌ AUTHENTICATION FAILED'}</div>
+                    ${isValid ? `<div class="code-display" style="background: #e6fffa; border: 1px solid #38a169; color: #2d5a3d; padding: 8px; margin: 4px 0;"><strong>🎯 Synchronized Window:</strong> ${windowResults.find(w => w.matches).windowName}</div>` : ''}
                 </div>
             `);
 
@@ -1701,6 +2841,243 @@
             alert('Used codes cleared!');
         }
 
+        // Backup Codes Functions
+
+        function generateBackupCodes() {
+            currentBackupCodes = backupCodes.generateCodes();
+            StorageManager.saveBackupCodes(currentBackupCodes);
+
+            displayBackupCodes();
+            showBackupCodesAlgorithm();
+            updateBackupCodesStatus();
+        }
+
+        function displayBackupCodes() {
+            const codesHtml = currentBackupCodes.map((code, index) =>
+                `<div class="backup-code-item enhanced-visibility">
+                    <span class="code-number">${index + 1}.</span>
+                    <code class="backup-code-value">${code}</code>
+                    <span class="code-status unused">✓ Unused</span>
+                </div>`
+            ).join('');
+
+            document.getElementById('generatedCodes').innerHTML = `
+                <div class="educational-header">
+                    <h4>🔑 Your Generated Backup Codes</h4>
+                    <p class="generation-info">Generated: ${new Date().toLocaleString()} | Entropy: ~50.4 bits per code</p>
+                </div>
+                <div class="codes-grid enhanced">
+                    ${codesHtml}
+                </div>
+                <div class="educational-details">
+                    <div class="security-warning enhanced">
+                        🚨 <strong>Critical Security Notice:</strong> Each code provides one-time access to your account. Store securely and never share.
+                    </div>
+                    <div class="usage-instructions">
+                        <h5>📋 How to Use These Codes:</h5>
+                        <ul>
+                            <li>Use any code when your authenticator app is unavailable</li>
+                            <li>Enter the code exactly as shown (hyphens optional)</li>
+                            <li>Each code becomes invalid after one use</li>
+                            <li>Generate new codes when you have 2-3 remaining</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            // Show the backup codes section
+            document.getElementById('backupCodesDisplay').style.display = 'block';
+            document.getElementById('downloadBtn').style.display = 'inline-block';
+        }
+
+        function showBackupCodesAlgorithm() {
+            const entropy = backupCodes.calculateEntropy();
+            const algorithmHtml = `
+                <div class="algorithm-overview">
+                    <h3>🔬 Core Algorithm Breakdown</h3>
+                    <p class="algorithm-intro">Understanding the cryptographic foundation and security properties of backup code generation.</p>
+                </div>
+
+                <div class="algorithm-step enhanced">
+                    <h4>🎲 Step 1: Cryptographically Secure Random Generation</h4>
+                    <p><strong>Purpose:</strong> Generate backup codes using cryptographically secure pseudorandom number generation.</p>
+
+                    <div class="core-functionality">
+                        <h5>🔧 Core Generation Process:</h5>
+                        <div class="process-flow">
+                            <div class="process-step">
+                                <span class="step-number">1.1</span>
+                                <div class="step-content">
+                                    <strong>Entropy Collection:</strong> crypto.getRandomValues() requests 256 bits of entropy from OS
+                                    <div class="technical-detail">Uses hardware random number generators (HRNG) or entropy pools</div>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">1.2</span>
+                                <div class="step-content">
+                                    <strong>Random Byte Generation:</strong> Creates Uint8Array with cryptographically secure random values
+                                    <div class="technical-detail">Each byte provides 8 bits of entropy (0-255 range)</div>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">1.3</span>
+                                <div class="step-content">
+                                    <strong>Character Mapping:</strong> Maps random bytes to character set using modulo operation
+                                    <div class="technical-detail">randomByte % 32 → character index (slight bias acceptable for this use case)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="collapsible-section">
+                        <summary>📊 Detailed Entropy Analysis</summary>
+                        <div class="collapsible-content">
+                            <div class="entropy-breakdown">
+                                <div class="entropy-item">• <strong>Method:</strong> crypto.getRandomValues() - Web Crypto API</div>
+                                <div class="entropy-item">• <strong>Source:</strong> Operating system's entropy pool (/dev/urandom on Unix)</div>
+                                <div class="entropy-item">• <strong>Character Set:</strong> ${backupCodes.characterSet}</div>
+                                <div class="entropy-item">• <strong>Set Size:</strong> 32 characters (2^5 = 5 bits per character)</div>
+                                <div class="entropy-item">• <strong>Code Length:</strong> ${backupCodes.codeLength} characters</div>
+                                <div class="entropy-item">• <strong>Bits per Character:</strong> ${entropy.bitsPerCharacter} bits</div>
+                                <div class="entropy-item">• <strong>Total Bits per Code:</strong> ${entropy.totalBitsPerCode} bits</div>
+                                <div class="entropy-item">• <strong>Possible Combinations:</strong> ${entropy.totalCombinations}</div>
+                                <div class="entropy-item">• <strong>Security Level:</strong> Equivalent to ~50-bit symmetric key</div>
+                                <div class="entropy-item">• <strong>Brute Force Resistance:</strong> 2^50 attempts ≈ 1.1 quadrillion combinations</div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step">
+                    <h4>🔤 Step 2: Character Set Selection</h4>
+                    <p><strong>Purpose:</strong> Use human-friendly character set to minimize transcription errors.</p>
+
+                    <details class="collapsible-section">
+                        <summary>📝 Character Set Design</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display">• <strong>Included:</strong> A-Z (except I,O), 2-9 (except 0,1)</div>
+                            <div class="code-display">• <strong>Excluded:</strong> 0 (zero), O (oh), 1 (one), I (eye), L (ell)</div>
+                            <div class="code-display">• <strong>Rationale:</strong> Prevent visual confusion during manual entry</div>
+                            <div class="code-display">• <strong>Base:</strong> 32 characters (power of 2 for efficient encoding)</div>
+                            <div class="code-display">• <strong>Format:</strong> XXXX-XXXX-XX for readability</div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="algorithm-step">
+                    <h4>🔐 Step 3: Security Properties</h4>
+                    <p><strong>Purpose:</strong> Ensure backup codes provide adequate security for account recovery.</p>
+
+                    <details class="collapsible-section">
+                        <summary>🛡️ Security Analysis</summary>
+                        <div class="collapsible-content">
+                            <div class="code-display">• <strong>One-time Use:</strong> Each code invalidated after use</div>
+                            <div class="code-display">• <strong>Storage:</strong> Stored securely in browser localStorage</div>
+                            <div class="code-display">• <strong>Verification:</strong> Constant-time comparison</div>
+                            <div class="code-display">• <strong>Rate Limiting:</strong> Should be implemented server-side</div>
+                            <div class="code-display">• <strong>Audit Trail:</strong> Usage tracked with timestamps</div>
+                        </div>
+                    </details>
+                </div>
+            `;
+
+            document.getElementById('backupAlgorithmSteps').innerHTML = algorithmHtml;
+        }
+
+        function downloadBackupCodes() {
+            if (!currentBackupCodes) {
+                alert('Please generate backup codes first.');
+                return;
+            }
+
+            const content = `TOTP Backup Codes\n` +
+                           `Generated: ${new Date().toLocaleString()}\n` +
+                           `Account: ${document.getElementById('accountName').value || 'Not specified'}\n\n` +
+                           `IMPORTANT: Each code can only be used once. Store securely.\n\n` +
+                           currentBackupCodes.map((code, index) => `${index + 1}. ${code}`).join('\n') +
+                           `\n\nKeep these codes in a secure location separate from your device.`;
+
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'totp-backup-codes.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function clearBackupCodes() {
+            if (confirm('Are you sure you want to clear all backup codes? This action cannot be undone.')) {
+                StorageManager.clearBackupCodes();
+                currentBackupCodes = null;
+                document.getElementById('generatedCodes').innerHTML = '<p>No backup codes generated yet.</p>';
+                document.getElementById('backupAlgorithmSteps').innerHTML = '';
+                updateBackupCodesStatus();
+                alert('Backup codes cleared!');
+            }
+        }
+
+        function verifyBackupCode() {
+            const inputCode = document.getElementById('backupCodeInput').value.trim();
+            if (!inputCode) {
+                alert('Please enter a backup code.');
+                return;
+            }
+
+            const result = backupCodes.verifyCode(inputCode);
+
+            if (result.success) {
+                document.getElementById('backupVerificationResult').innerHTML = `
+                    <div class="alert alert-success">
+                        <strong>✅ Success!</strong> Backup code verified and used: ${result.code}
+                    </div>
+                `;
+                updateBackupCodesStatus();
+            } else {
+                document.getElementById('backupVerificationResult').innerHTML = `
+                    <div class="alert alert-error">
+                        <strong>❌ Failed!</strong> ${result.error}
+                    </div>
+                `;
+            }
+
+            document.getElementById('backupCodeInput').value = '';
+        }
+
+        function updateBackupCodesStatus() {
+            const backupData = StorageManager.getBackupCodes();
+            const statusDiv = document.getElementById('backupCodesStatus');
+
+            if (!backupData) {
+                statusDiv.innerHTML = '<p>No backup codes generated.</p>';
+                return;
+            }
+
+            const totalCodes = backupData.codes.length;
+            const usedCodes = backupData.codes.filter(c => c.used).length;
+            const remainingCodes = totalCodes - usedCodes;
+
+            statusDiv.innerHTML = `
+                <div class="status-info">
+                    <div class="status-item">
+                        <strong>Total Codes:</strong> ${totalCodes}
+                    </div>
+                    <div class="status-item">
+                        <strong>Used:</strong> ${usedCodes}
+                    </div>
+                    <div class="status-item">
+                        <strong>Remaining:</strong> ${remainingCodes}
+                    </div>
+                    <div class="status-item">
+                        <strong>Generated:</strong> ${new Date(backupData.generatedAt).toLocaleString()}
+                    </div>
+                </div>
+                ${remainingCodes <= 2 ? '<div class="security-warning">⚠️ Warning: Only ' + remainingCodes + ' backup codes remaining. Consider generating new ones.</div>' : ''}
+            `;
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Check if there's existing enrollment
@@ -1711,6 +3088,15 @@
             }
 
             updateUsedCodesDisplay();
+
+            // Initialize backup codes if they exist
+            const backupData = StorageManager.getBackupCodes();
+            if (backupData) {
+                currentBackupCodes = backupData.codes.map(c => c.code);
+                displayBackupCodes();
+                showBackupCodesAlgorithm();
+            }
+            updateBackupCodesStatus();
         });
 
         // Handle Enter key in verification input
@@ -1718,6 +3104,13 @@
             document.getElementById('verificationCode').addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     verifyCode();
+                }
+            });
+
+            // Handle Enter key in backup code input
+            document.getElementById('backupCodeInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    verifyBackupCode();
                 }
             });
         });
