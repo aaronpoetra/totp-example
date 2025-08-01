@@ -1,0 +1,49 @@
+Time-based One-Time Password (TOTP) is the open standard behind the 6-digit codes you see in Google Authenticator, Microsoft Authenticator, Authy, 1Password, etc.
+
+1. Core Idea
+    1. A shared secret (160- to 512-bit random key) is exchanged ONCE between server and client—usually encoded as Base32 or inside a QR code.
+    2. Both sides compute the same short-lived OTP by feeding the current Unix-time slice into the HOTP algorithm.
+2. Algorithm (30-second default)
+    1. T = floor(current Unix time / time-step)  (default step = 30 s)
+    2. MAC = HMAC-SHA-1/256/512(secret, T)
+    3. Dynamic Truncation (DT) → 31-bit unsigned integer
+    4. OTP = integer mod 10^digits (zero-padded to 6–8 digits)
+3. Enrollment Flow
+    1. Server:
+        1. Generate secret K.
+        2. Persist (user_id, K, step, digits, algorithm) and hash K at rest.
+        3. Encode K in an otpauth:// URL, render as QR code.
+    2. Client:
+        1. Scan QR code → app stores (K, step, digits, algorithm).
+        2. No further network required.
+4. Authentication Flow
+    1. User enters username + password (factor 1).
+    2. Server prompts for 6-digit code.
+    3. User opens TOTP app → reads code.
+    4. Server recomputes OTP for T-1, T, T+1 to tolerate clock drift.
+    5. Match → grant session; optionally mark code as “used”.
+5. Security Properties
+    1. Secret never travels again after enrollment.
+    2. Codes are short-lived (30 s) and single-use.
+    3. Works offline on the device.
+    4. NOT phishing-proof; FIDO2/WebAuthn is stronger.
+6. Tips & Caveats
+    1. Clock skew: allow ±1 step; run NTP on the server.
+    2. Backup: export/print the Base32 secret.
+    3. Algorithm: prefer SHA-256/512 over SHA-1.
+    4. Digits: 6 is standard; 8 is common for banks.
+    5. Rate-limit verification endpoints.
+    6. Reject previously used codes.
+    7. Serve QR codes over TLS; discard after scan.
+7. otpauth:// URL Format (for QR codes)
+    1. Example: otpauth://totp/Issuer:account?secret=JBSWY3DPEHPK3PXP&issuer=ExampleCo&algorithm=SHA1&digits=6&period=30
+8. When TOTP Isn’t Enough
+    1. Phishing / MITM attacks can harvest both factors.
+    2. Push approvals or FIDO2/WebAuthn hardware tokens provide phishing-resistant alternatives.
+9. Libraries (open-source)
+    - Python: pyotp
+    - Node.js: speakeasy, otplib
+    - Java: java-totp, GoogleAuth
+    - C/C++: OATH Toolkit
+
+TOTP is a simple, widely supported second factor that raises the bar against credential stuffing and is easy to integrate.
