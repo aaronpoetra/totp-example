@@ -17,7 +17,7 @@ This implementation demonstrates:
 1. **TOTPGenerator Class**: RFC 6238 compliant TOTP implementation
    - Cryptographically secure secret generation
    - Base32 encoding/decoding
-   - HMAC-SHA1 computation using Web Crypto API
+   - HMAC-SHA256 computation using Web Crypto API
    - Dynamic truncation algorithm
    - Time-based counter calculation
 
@@ -68,9 +68,9 @@ The demo shows each step of the TOTP algorithm in real-time:
    T = floor(1640995200 / 30) = 54699840
    ```
 
-2. **HMAC-SHA1 Computation**:
-   ```
-   HMAC = HMAC-SHA1(secret, counter_as_8_bytes)
+2. **HMAC-SHA256 Computation**:
+   ```javascript
+   HMAC = HMAC-SHA256(secret, counter_as_8_bytes)
    Result: cc93cf18508d94934c64804e014f5af4a6300a37
    ```
 
@@ -102,7 +102,7 @@ The demo shows each step of the TOTP algorithm in real-time:
 // Time counter calculation
 const counter = Math.floor(timestamp / 30);
 
-// HMAC-SHA1 computation
+// HMAC-SHA256 computation
 const hmac = await crypto.subtle.sign('HMAC', key, counterBytes);
 
 // Dynamic truncation
@@ -172,7 +172,7 @@ Based on the specifications in `docs/TOTP_FUNDAMENTAL.txt`:
 
 ### Core Algorithm
 1. **T = floor(current Unix time / time-step)** (default step = 30s)
-2. **MAC = HMAC-SHA-1/256/512(secret, T)**
+2. **MAC = HMAC-SHA-256/512(secret, T)**
 3. **Dynamic Truncation (DT) → 31-bit unsigned integer**
 4. **OTP = integer mod 10^digits** (zero-padded to 6–8 digits)
 
@@ -189,7 +189,7 @@ Based on the specifications in `docs/TOTP_FUNDAMENTAL.txt`:
 1. **Use HTTPS**: Always serve over TLS in production
 2. **Rate Limiting**: Implement verification endpoint rate limiting
 3. **Secure Storage**: Hash secrets at rest on server
-4. **Algorithm Choice**: Prefer SHA-256/512 over SHA-1
+4. **Algorithm Choice**: Using SHA-256 for enhanced security
 5. **Backup Codes**: Provide recovery mechanisms
 
 ### Demo Limitations

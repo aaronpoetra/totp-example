@@ -1444,7 +1444,7 @@
             constructor() {
                 this.timeStep = 30; // 30 seconds
                 this.digits = 6;
-                this.algorithm = 'SHA-1';
+                this.algorithm = 'SHA-256';
             }
 
             // Generate cryptographically secure random secret
@@ -1741,16 +1741,16 @@
             }
 
             /**
-             * HMAC-SHA1 Generation - Educational Implementation
+             * HMAC-SHA256 Generation - Educational Implementation
              *
              * HMAC (Hash-based Message Authentication Code) provides cryptographic
-             * authentication using a secret key and SHA-1 hash function.
+             * authentication using a secret key and SHA-256 hash function.
              *
              * Algorithm Overview:
              * 1. Import the shared secret as a cryptographic key
              * 2. Convert the time counter to an 8-byte big-endian array
-             * 3. Generate HMAC-SHA1 signature using the key and counter
-             * 4. Return the 20-byte HMAC result
+             * 3. Generate HMAC-SHA256 signature using the key and counter
+             * 4. Return the 32-byte HMAC result
              *
              * Security Properties:
              * - Authenticity: Only someone with the secret can generate valid HMACs
@@ -1767,8 +1767,8 @@
                 // The Web Crypto API requires explicit key import for security
                 const key = await crypto.subtle.importKey(
                     'raw',           // Key format: raw bytes
-                    secret,          // The shared secret (typically 20 bytes for SHA-1)
-                    { name: 'HMAC', hash: 'SHA-1' },  // Algorithm: HMAC with SHA-1
+                    secret,          // The shared secret (typically 32 bytes for SHA-256)
+                    { name: 'HMAC', hash: 'SHA-256' },  // Algorithm: HMAC with SHA-256
                     false,           // Not extractable (security best practice)
                     ['sign']         // Key usage: only for signing (generating HMAC)
                 );
@@ -1783,22 +1783,22 @@
                 // Educational note: counterBytes is an 8-byte big-endian representation
                 // of the time counter. This ensures consistent byte ordering across platforms.
 
-                // Step 3: Generate the HMAC-SHA1 signature
-                // This produces a 160-bit (20-byte) cryptographic hash
+                // Step 3: Generate the HMAC-SHA256 signature
+                // This produces a 256-bit (32-byte) cryptographic hash
                 const signature = await crypto.subtle.sign('HMAC', key, counterBytes);
 
                 // Educational note: The HMAC operation combines:
                 // - The secret key (for authentication)
                 // - The time counter (for time-based uniqueness)
-                // - SHA-1 hash function (for cryptographic strength)
+                // - SHA-256 hash function (for cryptographic strength)
 
                 // Step 4: Convert to Uint8Array for consistent handling
                 return new Uint8Array(signature);
 
                 // Educational summary:
                 // - Input: Secret key + Time counter
-                // - Process: HMAC-SHA1 cryptographic operation
-                // - Output: 20-byte authentication code
+                // - Process: HMAC-SHA256 cryptographic operation
+                // - Output: 32-byte authentication code
                 // - Security: Provides authenticity and integrity
             }
 
@@ -2221,13 +2221,13 @@
                 <div class="algorithm-step">
                     <h4>🔗 Step 3: OTPAuth URL Generation</h4>
                     <p><strong>Purpose:</strong> Create a standardized URL that authenticator apps can parse to set up TOTP.</p>
-                    <div class="code-display"><strong>Format:</strong> otpauth://totp/[Issuer]:[Account]?secret=[Base32]&issuer=[Issuer]&algorithm=SHA1&digits=6&period=30</div>
+                    <div class="code-display"><strong>Format:</strong> otpauth://totp/[Issuer]:[Account]?secret=[Base32]&issuer=[Issuer]&algorithm=SHA256&digits=6&period=30</div>
                     <div class="code-display"><strong>Components:</strong></div>
                     <div class="code-display">• Protocol: otpauth://totp/</div>
                     <div class="code-display">• Account: ${account}</div>
                     <div class="code-display">• Issuer: ${issuer}</div>
                     <div class="code-display">• Secret: ${base32Secret}</div>
-                    <div class="code-display">• Algorithm: SHA1 (HMAC-SHA1)</div>
+                    <div class="code-display">• Algorithm: SHA256 (HMAC-SHA256)</div>
                     <div class="code-display">• Digits: 6 (OTP length)</div>
                     <div class="code-display">• Period: 30 seconds (time window)</div>
                     <p><em>💡 Educational Note: This URL format is standardized across authenticator apps (Google Authenticator, Authy, etc.) ensuring compatibility.</em></p>
@@ -2388,7 +2388,7 @@
                 </div>
 
                 <div class="algorithm-step" id="step3-container">
-                    <h4>🔐 Step 3: HMAC-SHA1 Computation (RFC 2104)</h4>
+                    <h4>🔐 Step 3: HMAC-SHA256 Computation (RFC 2104)</h4>
                     <p><strong>Purpose:</strong> Generate a cryptographic hash using the shared secret and counter bytes.</p>
                     <div class="code-display"><strong>Secret key:</strong> [Hidden for security - ${secretData.secret.length} bytes]</div>
                     <div class="code-display"><strong>Message:</strong> [<span id="hmac-message">${counterBytes.join(', ')}</span>] (8 bytes)</div>
@@ -2398,11 +2398,11 @@
                     <details class="collapsible-section">
                         <summary>🔍 Detailed HMAC Process</summary>
                         <div class="collapsible-content">
-                            <div class="code-display"><strong>🔧 HMAC-SHA1 Specification:</strong></div>
-                            <div class="code-display">• <strong>Standard:</strong> RFC 2104 (HMAC) + RFC 3174 (SHA-1)</div>
-                            <div class="code-display">• <strong>Hash Function:</strong> SHA-1 (160-bit output)</div>
+                            <div class="code-display"><strong>🔧 HMAC-SHA256 Specification:</strong></div>
+                            <div class="code-display">• <strong>Standard:</strong> RFC 2104 (HMAC) + RFC 6234 (SHA-256)</div>
+                            <div class="code-display">• <strong>Hash Function:</strong> SHA-256 (256-bit output)</div>
                             <div class="code-display">• <strong>Block Size:</strong> 512 bits (64 bytes)</div>
-                            <div class="code-display">• <strong>Output Size:</strong> 160 bits (20 bytes)</div>
+                            <div class="code-display">• <strong>Output Size:</strong> 256 bits (32 bytes)</div>
 
                             <div class="code-display"><strong>📥 Input Components:</strong></div>
                             <div class="code-display">• <strong>Secret Key:</strong> ${secretData.secret.length} bytes (shared secret)</div>
@@ -2414,8 +2414,8 @@
                             <div class="code-display">1. <strong>Key Padding:</strong> Pad or hash key to block size (64 bytes)</div>
                             <div class="code-display">2. <strong>Inner Pad Creation:</strong> XOR key with 0x36 (repeated 64 times)</div>
                             <div class="code-display">3. <strong>Outer Pad Creation:</strong> XOR key with 0x5C (repeated 64 times)</div>
-                            <div class="code-display">4. <strong>Inner Hash:</strong> SHA1(inner_pad || message)</div>
-                            <div class="code-display">5. <strong>Outer Hash:</strong> SHA1(outer_pad || inner_hash)</div>
+                            <div class="code-display">4. <strong>Inner Hash:</strong> SHA256(inner_pad || message)</div>
+                            <div class="code-display">5. <strong>Outer Hash:</strong> SHA256(outer_pad || inner_hash)</div>
 
                             <div class="code-display"><strong>🔒 Security Properties:</strong></div>
                             <div class="code-display">• <strong>Authentication:</strong> Verifies message authenticity</div>
